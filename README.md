@@ -2,7 +2,7 @@
 
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
 
-This project endeavours to enable installation of Fedora Silverblue on T2 Macs (aka the last generation of Macs pre Apple Silicon), by makingtthe minimum changes necessary to provide hardware support.
+This project endeavours to enable installation of Fedora Silverblue on T2 Macs (aka the last generation of Macs pre Apple Silicon), by making the minimum changes necessary to provide hardware support.
 
 ## Installation
 
