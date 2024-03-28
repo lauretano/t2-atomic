@@ -52,6 +52,6 @@ modules:
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
   - type: script
     snippets:
-      - "curl https://copr.fedorainfracloud.org/coprs/sharpenedblade/t2linux/repo/fedora-%OS_VERSION%/sharpenedblade-t2linux-fedora-%OS_VERSION%.repo > /etc/yum.repos.d/_copr_sharpenedblade-t2linux.repo"
+      #- "curl https://copr.fedorainfracloud.org/coprs/sharpenedblade/t2linux/repo/fedora-%OS_VERSION%/sharpenedblade-t2linux-fedora-%OS_VERSION%.repo > /etc/yum.repos.d/_copr_sharpenedblade-t2linux.repo"
       - "rpm-ostree cliwrap install-to-root / && \
     rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:sharpenedblade:t2linux kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra"
