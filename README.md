@@ -2,7 +2,7 @@
 
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
 
-This project endeavours to enable installation of Fedora Silverblue on T2 Macs (aka the last generation of Macs pre Apple Silicon), by making the minimum changes necessary to provide hardware support.
+This project endeavours to enable installation of Fedora Silverblue on T2 Macs (aka the last generation of Macs pre Apple Silicon), by making the minimum changes necessary to provide hardware support. At the current moment no ISO to publish so you'd need external keyboard/mouse to do the install and rebase.
 
 ## Installation
 
@@ -13,7 +13,7 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/Lauretano/fedora-silverblue-t2:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/lauretano/fedora-silverblue-t2:latest
   ```
 - Reboot to complete the rebase:
   ```
@@ -21,7 +21,7 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
 - Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/Lauretano/fedora-silverblue-t2:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/lauretano/fedora-silverblue-t2:latest
   ```
 - Reboot again to complete the installation
   ```
