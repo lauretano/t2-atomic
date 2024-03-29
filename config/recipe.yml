@@ -20,7 +20,9 @@ modules:
     repos:
       - https://copr.fedorainfracloud.org/coprs/sharpenedblade/t2linux/repo/fedora-%OS_VERSION%/sharpenedblade-t2linux-fedora-%OS_VERSION%.repo
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
-
+    install:
+      - grubby
+      
   - type: script
     snippets:
       #- "curl https://copr.fedorainfracloud.org/coprs/sharpenedblade/t2linux/repo/fedora-$(rpm -E '%fedora')/sharpenedblade-t2linux-fedora-$(rpm -E '%fedora').repo > /etc/yum.repos.d/_copr_sharpenedblade-t2linux.repo"
