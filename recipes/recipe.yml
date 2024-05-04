@@ -42,7 +42,6 @@ modules:
       
   - type: rpm-ostree
     install:
-      - t2linux-config
       # - micro
       # - starship
     remove:
