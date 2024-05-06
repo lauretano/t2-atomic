@@ -13,12 +13,21 @@ This alpha-state project endeavours to enable the best possible hardware support
 > **Warning**  
 > These images should be considered of early Alpha quality, useful for a proof of concept if you have an older T2 MacBook collecting dust you'd like to run the modern Fedora Atomic Desktops on.
 
-### If you're on a vanilla Fedora Silverblue image:
-Rebasing from Kinoite isn't supported, you may encounter some bugs, most of which can be worked around with some effort. Luckily you can always roll back!
+### First, select an Image Variant
+All image variants are based on Universal Blue images, so they include their update tooling, justfiles, etc. When using the rebase commands, be sure to use the correct variant for your desired DE and use case.
+- t2-atomic - as close to vanilla Fedora Atomic Gnome (Silverblue) as possible.
+- t2-atomic-plasma - as close to vanilla Fedora Atomic KDE (Kinoite) as possible.
 
+### Then, Rebase, Find Joy
+
+#### from a vanilla Fedora Silverblue/Kinoite image:
 You'll be rebasing twice, first to the unsigned image which installs the proper signing keys and policies needed for the signed image.
 
-- First, rebase to the unsigned image:
+- First, rebase to the unsigned image, replacing [variant] with your desired image:
+  ```
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/lauretano/[variant]:latest
+  ```
+  - example, for the default Gnome desktop:
   ```
   rpm-ostree rebase ostree-unverified-registry:ghcr.io/lauretano/t2-atomic:latest
   ```
@@ -26,7 +35,11 @@ You'll be rebasing twice, first to the unsigned image which installs the proper 
   ```
   systemctl reboot
   ```
-- Then rebase to the signed image, like so:
+- Then rebase to the signed image, replacing [variant] with your desired image:
+  ```
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/lauretano/[variant]:latest
+  ```
+  - example, for the default Gnome desktop:
   ```
   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/lauretano/t2-atomic:latest
   ```
