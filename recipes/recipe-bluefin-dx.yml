@@ -4,12 +4,12 @@
 # this is an experiment to get silverblue properly operational on T2 macs
 
 # image will be published to ghcr.io/<user>/<name>
-name: t2-atomic
+name: t2-atomic-bluefin-dx
 # description will be included in the image's metadata
-description: Fedora Atomic Desktop Gnome spin for Apple T2 Hardware
+description: Project Bluefin spin for Apple T2 Hardware
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/bluefin-dx
 image-version: 40 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order

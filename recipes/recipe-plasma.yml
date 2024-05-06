@@ -6,7 +6,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: t2-atomic-plasma
 # description will be included in the image's metadata
-description: Fedora Atomic Desktop spins for Apple T2 Hardware
+description: Fedora Atomic Desktop Plasma spin for Apple T2 Hardware
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/kinoite-main
