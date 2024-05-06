@@ -4,7 +4,7 @@
 # this is an experiment to get silverblue properly operational on T2 macs
 
 # image will be published to ghcr.io/<user>/<name>
-name: t2-atomic-gnome
+name: t2-atomic-plasma
 # description will be included in the image's metadata
 description: Fedora Atomic Desktop spins for Apple T2 Hardware
 
