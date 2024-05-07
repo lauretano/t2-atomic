@@ -57,7 +57,7 @@ modules:
       # If no repo information is specified, Flathub will be used by default
       repo-url: https://nightly.gnome.org/gnome-nightly.flatpakrepo
       repo-name: gnome-nightly
-      repo-title: "Gnome Nightly" (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      repo-title: "Gnome Nightly (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
         - org.gnome.Ptyxis.Devel
 
@@ -69,38 +69,38 @@ modules:
       # repo-name: flathub
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
-        io.github.dvlv.boxbuddyrs
-        org.gnome.baobab
-        org.gnome.Calculator
-        org.gnome.Calendar
-        org.gnome.Characters
-        org.chromium.Chromium
-        org.gnome.clocks
-        org.gnome.Connections
-        org.gnome.Contacts
-        ca.desrt.dconf-editor
-        com.discordapp.Discord
-        org.gnome.Evince
-        com.mattjakeman.ExtensionManager
-        com.github.tchx84.Flatseal
-        org.gnome.font-viewer
-        org.gnome.Fractal
-        io.freetubeapp.FreeTube
-        it.mijorus.gearlever
-        org.gnome.Logs
-        org.gnome.Loupe
-        org.gnome.Maps
-        rg.fedoraproject.MediaWriter
-        io.missioncenter.MissionCenter
-        org.gnome.NautilusPreviewer
-        md.obsidian.Obsidian
-        com.prusa3d.PrusaSlicer
-        org.raspberrypi.rpi-imager
-        org.gnome.Snapshot
-        org.gnome.TextEditor
-        org.gnome.Weather
-        io.missioncenter.MissionCenter
-        org.mozilla.firefox
+        - io.github.dvlv.boxbuddyrs
+        - org.gnome.baobab
+        - org.gnome.Calculator
+        - org.gnome.Calendar
+        - org.gnome.Characters
+        - org.chromium.Chromium
+        - org.gnome.clocks
+        - org.gnome.Connections
+        - org.gnome.Contacts
+        - ca.desrt.dconf-editor
+        - com.discordapp.Discord
+        - org.gnome.Evince
+        - com.mattjakeman.ExtensionManager
+        - com.github.tchx84.Flatseal
+        - org.gnome.font-viewer
+        - org.gnome.Fractal
+        - io.freetubeapp.FreeTube
+        - it.mijorus.gearlever
+        - org.gnome.Logs
+        - org.gnome.Loupe
+        - org.gnome.Maps
+        - rg.fedoraproject.MediaWriter
+        - io.missioncenter.MissionCenter
+        - org.gnome.NautilusPreviewer
+        - md.obsidian.Obsidian
+        - com.prusa3d.PrusaSlicer
+        - org.raspberrypi.rpi-imager
+        - org.gnome.Snapshot
+        - org.gnome.TextEditor
+        - org.gnome.Weather
+        - io.missioncenter.MissionCenter
+        - org.mozilla.firefox
         # org.mozilla.firefox
         # - org.gnome.Loupe
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
