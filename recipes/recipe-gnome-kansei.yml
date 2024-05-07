@@ -1,15 +1,15 @@
 #
-# Copyright (C) 2024 Chris Lauretano <os@cdl.sh>
+# 2024 Chris Lauretano <os@cdl.sh>
 #
-# this is an experiment to get silverblue properly operational on T2 macs
+# tthis is very much my personal opinionated workstation setup in progress
 
 # image will be published to ghcr.io/<user>/<name>
-name: t2-atomic-bluefin-dx
+name: t2-atomic-kansei
 # description will be included in the image's metadata
-description: Project Bluefin spin for Apple T2 Hardware
+description: personal opinionated Fedora Atomic workstation (for Apple T2 Hardware)
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bluefin-dx
+base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 40 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -25,9 +25,7 @@ modules:
     repos:
       - https://copr.fedorainfracloud.org/coprs/sharpenedblade/t2linux/repo/fedora-%OS_VERSION%/sharpenedblade-t2linux-fedora-%OS_VERSION%.repo
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
-    install:
-      # - grubby #thought this was a dependency and it is for t2linux-config, but i think it was just writing a couple grub config things for t2
-
+ 
   - type: script
     snippets:
       - "rpm-ostree cliwrap install-to-root / && \
@@ -46,13 +44,22 @@ modules:
       
   - type: rpm-ostree
     install:
-      # - micro
-      # - starship
+      - yaru-theme
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
-      # firefox
-      # firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+      #firefox
+      #firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+
+  - type: default-flatpaks
+    notify: false # Send notification after install/uninstall is finished (true/false)
+    system:
+      # If no repo information is specified, Flathub will be used by default
+      repo-url: https://nightly.gnome.org/gnome-nightly.flatpakrepo
+      repo-name: gnome-nightly
+      repo-title: "Gnome Nightly" (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      install:
+        - org.gnome.Ptyxis.Devel
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -62,6 +69,38 @@ modules:
       # repo-name: flathub
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
+        io.github.dvlv.boxbuddyrs
+        org.gnome.baobab
+        org.gnome.Calculator
+        org.gnome.Calendar
+        org.gnome.Characters
+        org.chromium.Chromium
+        org.gnome.clocks
+        org.gnome.Connections
+        org.gnome.Contacts
+        ca.desrt.dconf-editor
+        com.discordapp.Discord
+        org.gnome.Evince
+        com.mattjakeman.ExtensionManager
+        com.github.tchx84.Flatseal
+        org.gnome.font-viewer
+        org.gnome.Fractal
+        io.freetubeapp.FreeTube
+        it.mijorus.gearlever
+        org.gnome.Logs
+        org.gnome.Loupe
+        org.gnome.Maps
+        rg.fedoraproject.MediaWriter
+        io.missioncenter.MissionCenter
+        org.gnome.NautilusPreviewer
+        md.obsidian.Obsidian
+        com.prusa3d.PrusaSlicer
+        org.raspberrypi.rpi-imager
+        org.gnome.Snapshot
+        org.gnome.TextEditor
+        org.gnome.Weather
+        io.missioncenter.MissionCenter
+        org.mozilla.firefox
         # org.mozilla.firefox
         # - org.gnome.Loupe
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
