@@ -52,16 +52,6 @@ modules:
       #firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
   - type: default-flatpaks
-    notify: false # Send notification after install/uninstall is finished (true/false)
-    system:
-      # If no repo information is specified, Flathub will be used by default
-      repo-url: https://nightly.gnome.org/gnome-nightly.flatpakrepo
-      repo-name: gnome-nightly
-      repo-title: "Gnome Nightly (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
-      install:
-        - org.gnome.Ptyxis.Devel
-
-  - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
       # If no repo information is specified, Flathub will be used by default
@@ -99,8 +89,6 @@ modules:
         - org.gnome.Snapshot
         - org.gnome.TextEditor
         - org.gnome.Weather
-        - io.missioncenter.MissionCenter
-        - org.mozilla.firefox
         # org.mozilla.firefox
         # - org.gnome.Loupe
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
@@ -111,6 +99,17 @@ modules:
       # - org.gnome.eog
     user:
       # repo-name: flathub
+
+  - type: script
+    snippets:
+      if [ "${FEDORA_MAJOR_VERSION}" -eq "40" ]; then
+        rpm-ostree override replace \
+        --experimental \
+        --from repo=copr:copr.fedorainfracloud.org:ublue-os:staging \
+          vte291 \
+          vte-profile
+        rpm-ostree install ptyxis
+     fi
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
   
