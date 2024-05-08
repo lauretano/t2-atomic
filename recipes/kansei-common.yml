@@ -1,0 +1,41 @@
+# this applies the kansei edition apps and modifications
+modules:
+  - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
+
+  - type: rpm-ostree
+    install:
+      - yaru-theme
+
+  - type: default-flatpaks
+    notify: false # Send notification after install/uninstall is finished (true/false)
+    system:
+      # If no repo information is specified, Flathub will be used by default
+      # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      # repo-name: flathub
+      # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      install:
+        - io.github.dvlv.boxbuddyrs
+        - org.chromium.Chromium
+        - com.discordapp.Discord
+        - com.github.tchx84.Flatseal
+        - org.gnome.Fractal
+        - io.freetubeapp.FreeTube
+        - it.mijorus.gearlever
+        - rg.fedoraproject.MediaWriter
+        - io.missioncenter.MissionCenter
+        - md.obsidian.Obsidian
+        - com.prusa3d.PrusaSlicer
+        - org.raspberrypi.rpi-imager
+
+  - type: script
+    snippets:
+      if [ "${FEDORA_MAJOR_VERSION}" -eq "40" ]; then
+        rpm-ostree override replace \
+        --experimental \
+        --from repo=copr:copr.fedorainfracloud.org:ublue-os:staging \
+          vte291 \
+          vte-profile
+        rpm-ostree install ptyxis
+     fi
