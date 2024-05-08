@@ -1,0 +1,23 @@
+#
+# 2024 Chris Lauretano <os@cdl.sh>
+#
+# this is an experiment to get silverblue properly operational on T2 macs
+
+name: t2-atomic
+# description will be included in the image's metadata
+description: Fedora Atomic Gnome (aka Silverblue) for Apple T2 Hardware
+
+base-image: ghcr.io/ublue-os/silverblue-main
+image-version: 40
+
+modules:
+  - type: files
+    files:
+      - usr: /usr # copies config/files/usr into your image's /usr.
+                  # put configuration files you want in /etc/ on a booted system 
+                  # in /usr/etc/ in the image. read more in files module reference.
+
+  - from-file: common-t2-enablement.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  
