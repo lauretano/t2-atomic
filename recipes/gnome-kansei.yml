@@ -23,7 +23,7 @@ modules:
 
   - from-file: common-t2-enablement.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
 
-  - from-file: kansei-common.yml
+  - from-file: common-kansei.yml
 
   - type: rpm-ostree
     repos:
