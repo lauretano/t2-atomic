@@ -3,7 +3,7 @@
 #
 # Fedora Atomic spins for Apple T2
 
-name: t2-atomic-cosmic-sb
+name: t2-atomic-cosmic-kansei
 # description will be included in the image's metadata
 description: Fedora Atomic Cosmic (added to silverblue) spin for Apple T2 Hardware
 
@@ -18,6 +18,8 @@ modules:
                   # in /usr/etc/ in the image. read more in files module reference.
 
   - from-file: common-t2-enablement.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
+
+  - from-file: common-kansei.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
   

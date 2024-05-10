@@ -6,7 +6,8 @@ modules:
 
   - type: rpm-ostree
     install:
-      - yaru-theme
+      - neofetch
+      - stress-ng
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)

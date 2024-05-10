@@ -25,7 +25,7 @@ jobs:
           - gnome.yml
           #- plasma.yml
           - gnome-kansei.yml
-          - cosmic-sb.yml
+          - cosmic-kansei.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image
