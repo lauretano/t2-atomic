@@ -59,12 +59,11 @@ modules:
 
   - type: gnome-extensions
     install:
-      - nightthemeswitcherromainvigier.fr.v75
-      - blur-my-shellaunetx.v61
-      - weatheroclockCleoMenezesJr.github.io.v13
-      - logomenuaryan_k.v30
-      - dash-to-paneljderose9.github.com.v62
-      - user-themegnome-shell-extensions.gcampax.github.com.v57
+      - Blur my Shell
+      - Dash to Panel
+      - Night Theme Switcher
+      - OpenWeather Refined
+      - PaperWM
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
   
