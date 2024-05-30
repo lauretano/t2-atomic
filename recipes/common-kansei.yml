@@ -6,7 +6,7 @@ modules:
 
   - type: rpm-ostree
     install:
-      - neofetch
+      - fastfetch
       - stress-ng
 
   - type: default-flatpaks
@@ -21,13 +21,13 @@ modules:
         - org.chromium.Chromium
         - com.discordapp.Discord
         - com.github.tchx84.Flatseal
-        - org.gnome.Fractal
         - io.freetubeapp.FreeTube
         - it.mijorus.gearlever
         - rg.fedoraproject.MediaWriter
         - io.missioncenter.MissionCenter
         - md.obsidian.Obsidian
         - com.prusa3d.PrusaSlicer
+        - im.riot.Riot
         - org.raspberrypi.rpi-imager
 
   - type: script
@@ -36,7 +36,7 @@ modules:
         rpm-ostree override replace \
         --experimental \
         --from repo=copr:copr.fedorainfracloud.org:ublue-os:staging \
-          vte291 \
+          vte291 \sudo sh -c 'echo -e "[1password]￼￼nname=1Password Stable Channel￼￼nbaseurl=https://downloads.1password.com/linux/rpm/stable/\$basearch\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=\https://downloads.1password.com/linux/keys/1password.asc\" > /etc/yum.repos.d/1password.repo'
           vte-profile
         rpm-ostree install ptyxis
      fi
