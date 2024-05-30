@@ -24,3 +24,5 @@ modules:
         - com.prusa3d.PrusaSlicer
         - im.riot.Riot
         - org.raspberrypi.rpi-imager
+        - re.sonny.Junction
+        - app.devsuite.Ptyxis
