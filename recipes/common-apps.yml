@@ -1,0 +1,5 @@
+# this applies the apps we want in all images
+modules:
+  - type: rpm-ostree
+    install:
+      - fastfetch

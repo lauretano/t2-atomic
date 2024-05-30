@@ -18,14 +18,15 @@ jobs:
       packages: write
       id-token: write
     strategy:
-      fail-fast: false # stop GH from cancelling all matrix builds if one fails
+      fail-fast: true # stop GH from cancelling all matrix builds if one fails
       matrix:
         recipe:
           # !! Add your recipes here 
           - gnome.yml
-          #- plasma.yml
           - gnome-kansei.yml
           - cosmic-kansei.yml
+          - cosmic-silverblue.yml
+          #- plasma.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image

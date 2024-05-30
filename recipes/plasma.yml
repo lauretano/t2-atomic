@@ -18,6 +18,6 @@ modules:
                   # in /usr/etc/ in the image. read more in files module reference.
 
   - from-file: common-t2-enablement.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
-
+  - from-file: common-apps.yml #installs apps common across all the t2 editions
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
   

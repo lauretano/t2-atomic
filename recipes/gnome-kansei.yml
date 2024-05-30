@@ -22,12 +22,8 @@ modules:
                   # in /usr/etc/ in the image. read more in files module reference.
 
   - from-file: common-t2-enablement.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
-
+  - from-file: common-apps.yml #installs apps common across all the t2 editions
   - from-file: common-kansei.yml
-
-  - type: rpm-ostree
-    repos:
-      - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
 
   - type: rpm-ostree
     install:
@@ -52,6 +48,7 @@ modules:
         - org.gnome.Evince
         - com.mattjakeman.ExtensionManager
         - org.gnome.font-viewer
+        - org.gnome.Fractal
         - org.gnome.Logs
         - org.gnome.Loupe
         - org.gnome.Maps
@@ -59,6 +56,15 @@ modules:
         - org.gnome.Snapshot
         - org.gnome.TextEditor
         - org.gnome.Weather
+
+  - type: gnome-extensions
+    install:
+    - nightthemeswitcherromainvigier.fr.v75
+    - blur-my-shellaunetx.v61
+    - weatheroclockCleoMenezesJr.github.io.v13
+    - logomenuaryan_k.v30
+    - dash-to-paneljderose9.github.com.v62
+    - user-themegnome-shell-extensions.gcampax.github.com.v57
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
   
