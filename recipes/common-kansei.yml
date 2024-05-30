@@ -4,6 +4,11 @@ modules:
     install:
       - stress-ng
 
+
+  #- type: rpm-ostree
+  #  repos:
+  #    - https://downloads.1password.com/linux/rpm/stable/x86_64
+
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
     system:
