@@ -3,7 +3,7 @@ modules:
   - type: rpm-ostree
     install:
       - stress-ng
-
+      - cascadia-fonts-all
 
   #- type: rpm-ostree
   #  repos:
