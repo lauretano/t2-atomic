@@ -28,6 +28,7 @@ modules:
   - type: rpm-ostree
     install:
       - yaru-theme
+      - gnome-calculator
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
@@ -38,7 +39,6 @@ modules:
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
         - org.gnome.baobab
-        - org.gnome.Calculator
         - org.gnome.Calendar
         - org.gnome.Characters
         - org.gnome.clocks
