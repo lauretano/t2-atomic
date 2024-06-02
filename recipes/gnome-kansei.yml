@@ -62,8 +62,8 @@ modules:
       - Blur my Shell
       - Dash to Panel
       - Night Theme Switcher
-      - OpenWeather Refined
       - PaperWM
+      - Display Scale Switcher
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
   
