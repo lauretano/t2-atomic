@@ -41,3 +41,4 @@ modules:
       - cockpit-system
       - cockpit-storaged
       - cockpit-sosreport
+      - cockpit-pcp
