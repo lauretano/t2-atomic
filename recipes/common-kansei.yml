@@ -31,3 +31,14 @@ modules:
         - org.raspberrypi.rpi-imager
         - re.sonny.Junction
         - app.devsuite.Ptyxis
+
+  - type: rpm-ostree
+    install:
+      - cockpit
+      - cockpit-ostree
+      - cockpit-selinux
+      - cockpit-networkmanager
+      - cockpit-podman
+      - cockpit-system
+      - cockpit-storaged
+      - cockpit-0sosreport
