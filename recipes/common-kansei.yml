@@ -41,4 +41,4 @@ modules:
       - cockpit-podman
       - cockpit-system
       - cockpit-storaged
-      - cockpit-0sosreport
+      - cockpit-sosreport
