@@ -34,7 +34,6 @@ modules:
 
   - type: rpm-ostree
     install:
-      - cockpit
       - cockpit-ostree
       - cockpit-selinux
       - cockpit-networkmanager
