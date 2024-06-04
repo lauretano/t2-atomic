@@ -1,4 +1,4 @@
-# T2 Atomic &nbsp; [![build-ublue](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
+# T2 Atomic &nbsp; [![bluebuild](https://github.com/lauretano/t2-atomic/actions/workflows/build.yml/badge.svg)](https://github.com/lauretano/t2-atomic/actions/workflows/build.yml)
 
 This alpha-state project endeavours to enable the best possible hardware support for Fedora Silverblue on T2 Macs (aka the last generation of Macs pre Apple Silicon). At the current moment, no ISO to publish so you'll need external keyboard/mouse to do the installation and initial rebase.
 
