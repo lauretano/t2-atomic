@@ -42,3 +42,4 @@ modules:
       - cockpit-storaged
       - cockpit-sosreport
       - cockpit-pcp
+      - powertop
