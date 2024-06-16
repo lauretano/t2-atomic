@@ -36,10 +36,8 @@ modules:
     install:
       - cockpit-ostree
       - cockpit-selinux
-      - cockpit-networkmanager
       - cockpit-podman
       - cockpit-system
       - cockpit-storaged
-      - cockpit-sosreport
       - cockpit-pcp
       - powertop
