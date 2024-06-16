@@ -5,7 +5,7 @@
 
 name: t2-atomic
 # description will be included in the image's metadata
-description: Fedora Atomic Gnome (aka Silverblue) for Apple T2 Hardware
+description: Fedora Atomic Gnome (aka Silverblue) for Apple T2 Hardware. Largely unopinionated, so most Gnome apps are via flatpak.
 
 base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 40
@@ -19,6 +19,7 @@ modules:
 
   - from-file: common-t2-enablement.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
   - from-file: common-apps.yml #installs apps common across all the t2 editions
+  - from-file: common-apps-gnome.yml #installs gnome flatpaks and such
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
   

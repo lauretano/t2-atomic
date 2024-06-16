@@ -1,0 +1,37 @@
+# rpm and flatpaks for mostly vanilla silverblue
+# 2024 T2-Atomic by Chris Lauretano
+modules:
+  - type: rpm-ostree
+    install:
+      - gnome-calculator
+      - gnome-tweaks
+
+  - type: default-flatpaks
+    notify: false # Send notification after install/uninstall is finished (true/false)
+    system:
+      # If no repo information is specified, Flathub will be used by default
+      # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      # repo-name: flathub
+      # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      install:
+        - org.gnome.baobab
+        - org.gnome.Calculator
+        - org.gnome.Calendar
+        - org.gnome.Characters
+        - org.gnome.Cheese
+        - org.gnome.clocks
+        - org.gnome.Connections
+        - org.gnome.Contacts
+        - org.gnome.eog
+        - org.gnome.Extensions
+        - org.gnome.font-viewer
+        - org.gnome.Logs
+        - org.gnome.Loupe
+        - org.gnome.Maps
+        - org.gnome.NautilusPreviewer
+        - org.gnome.Papers
+        - org.gnome.Snapshot
+        - org.gnome.TextEditor
+        - org.gnome.Totem
+        - org.gnome.Weather
+        - org.fedoraproject.MediaWriter
