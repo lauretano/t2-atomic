@@ -35,7 +35,7 @@ modules:
   - type: rpm-ostree
     install:
       - cockpit-ostree
-      - cockpit-selinux
+      #- cockpit-selinux
       - cockpit-podman
       - cockpit-system
       - cockpit-storaged
