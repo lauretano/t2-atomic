@@ -18,7 +18,6 @@ modules:
         - org.gnome.Calculator
         - org.gnome.Calendar
         - org.gnome.Characters
-        - org.gnome.Cheese
         - org.gnome.clocks
         - org.gnome.Connections
         - org.gnome.Contacts
@@ -32,6 +31,6 @@ modules:
         - org.gnome.Papers
         - org.gnome.Snapshot
         - org.gnome.TextEditor
-        - org.gnome.Totem
         - org.gnome.Weather
         - org.fedoraproject.MediaWriter
+        - com.github.rafostar.Clapper
