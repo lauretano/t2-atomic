@@ -1,13 +1,13 @@
 #
 # 2024 Chris Lauretano <os@cdl.sh>
 #
-# this is an experiment to get silverblue properly operational on T2 macs
+# Fedora Atomic spins for Apple T2
 
-name: t2-atomic
+name: t2-atomic-plasma
 # description will be included in the image's metadata
-description: Fedora Atomic Gnome (aka Silverblue) for Apple T2 Hardware. Largely unopinionated, so most Gnome apps are via flatpak.
+description: Fedora Atomic Plasma (aka Kinoite) spin for Apple T2 Hardware
 
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/kinoite-main
 image-version: 40
 
 modules:
@@ -16,10 +16,8 @@ modules:
       - usr: /usr # copies config/files/usr into your image's /usr.
                   # put configuration files you want in /etc/ on a booted system 
                   # in /usr/etc/ in the image. read more in files module reference.
-
   - from-file: common-t2-enablement.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
   - from-file: common-apps.yml #installs apps common across all the t2 editions
-  - from-file: common-apps-gnome.yml #installs gnome flatpaks and such
-
+  - from-file: common-apps-plasma.yml #and plasma flatpaks etc because this has both
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
   

@@ -3,7 +3,7 @@
 #
 # Fedora Atomic spins for Apple T2
 
-name: t2-atomic-cosmic-kansei
+name: t2-atomic-cosmic-gnome
 # description will be included in the image's metadata
 description: Fedora Atomic Cosmic (added to silverblue) spin for Apple T2 Hardware
 
@@ -18,10 +18,8 @@ modules:
                   # in /usr/etc/ in the image. read more in files module reference.
 
   - from-file: common-t2-enablement.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
-  - from-file: common-apps.yml #installs apps common across all the t2 editions
-  - from-file: common-apps-gnome.yml #and gnome flatpaks we have both here
-  - from-file: common-kansei.yml
-  #- from-file: common-cosmic.yml
+  - from-file: common-apps.yml
+  - from-file: common-apps-gnome.yml #and gnome flatpaks etc because this has both
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
   
