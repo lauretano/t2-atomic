@@ -3,6 +3,7 @@
 This alpha-state project endeavours to enable the best possible hardware support for Fedora Silverblue on T2 Macs (aka the last generation of Macs pre Apple Silicon). At the current moment, no ISO to publish so you'll need external keyboard/mouse to do the installation and initial rebase.
 
 ## Updates
+- 18 June 2024, We're now publishing Plasma images to celebrate Plasma 6.1 releasing with explicit sync support. The fix for LUKS unlock is working in testing and should be available in builds soon.
 - 10 May 2024, a COSMIC variant is in testing, not for public consumption at this time. It won't work with the below instructions as SELinux has to be disabled for it to work for now. You wouldn't want to install anyway, more of a personal spin for my own internal testing.
 - as of 6 May 2024, we're rapidly approaching our first Beta release. Wifi and BT should now be mostly operational including WPA3
 - keyboard (touchbar via tiny-dfr), fan control (t2fanrd), and audio support are in place. There may be speaker equalizer presets that need to be brought in (such as for MacBookPro16,1).
@@ -17,7 +18,7 @@ For general information on the state of Linux on T2, see [t2linux wiki](https://
 - touchbar (tiny-dfr-rust)
 - fan control (t2fanrd)
 - wifi/bt hardware (customized for Fedora Atomic, but based on [NoaHimesaka1873's fork of asahi-installer](https://github.com/NoaHimesaka1873/asahi-installer)
-- thunderbolt
+- thunderbolt (video via USB-C works even with thunderbolt disabled)
 - webcam (via apple-bce)
 - audio, mostly. the mic doesn't work well on some models.
 
@@ -39,14 +40,14 @@ For general information on the state of Linux on T2, see [t2linux wiki](https://
 All image variants are based on Universal Blue images, so they include their update tooling, justfiles, etc. When using the rebase commands, be sure to use the correct variant for your desired DE and use case.
 
 #### Alpha state images
-- t2-atomic - as close to vanilla Fedora Atomic Gnome (Silverblue) as possible.
+- t2-atomic-gnome - as close to vanilla Fedora Atomic Gnome (Silverblue) as possible.
+- t2-atomic-plasma - as close to vanilla Fedora Atomic Plasma (Kinoite) as possible
 
 #### Pre-Alpha, don't install unless you love rolling back ;)
-- t2-atomic-plasma - as close to vanilla Fedora Atomic KDE (Kinoite) as possible.
+> Note that COSMIC images currently require disabling selinux, but only to use the COSMIC greeter.
+- t2-atomic-cosmic-gnome - COSMIC pre-alpha, atop silverblue (so it includes Gnome and related apps).
+- t2-atomic-cosmic-kansei - COSMIC pre-alpha, atop kinoite (so it includes plasma). WARNING: must disable selinux or you will need to rollback, you won't get past the login window.
 
-#### Personal spins that include a bunch of packages and flatpaks no one but Kansei wants (think 3d printing slicer apps, matrix client, a bunch of browsers, some raspberry pi-related tools, some dev tools.
-- t2-atomic-cosmic-kansei - COSMIC pre-alpha, atop silverblue (so it includes gnome). WARNING: must disable selinux or you will need to rollback, you won't get past the login window.
-- t2-atomic-kansei - same as t2-atomic (gnome) but with my personally used apps and flatpaks
 
 ### Then, Rebase, Find Joy
 
