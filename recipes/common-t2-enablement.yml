@@ -14,7 +14,7 @@ modules:
       - apple-bcm-firmware.sh # pulls firmware sources from arch-t2 mirror, uses asahi-installer fork to package for use in fedora
       - t2-kernel.sh #overrides with T2 kernel, applies kernel args
       - t2-internal-ethernet-blocklist.sh
-      - apple-bce-load-early.sh #sets apple-bce and dependents to load early so keyboard works early
+      #- apple-bce-load-early.sh #sets apple-bce and dependents to load early so keyboard works early
       
   - type: rpm-ostree
     install:
