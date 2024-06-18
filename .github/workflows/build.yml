@@ -1,4 +1,4 @@
-name: bluebuild
+name: T2 Image Build
 on:
   schedule:
     - cron: "00 17 * * *" # build at 17:00 UTC every day 
@@ -11,7 +11,7 @@ on:
   workflow_dispatch: # allow manually triggering builds
 jobs:
   bluebuild:
-    name: Build T2 Atomic
+    name: Build
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -31,7 +31,7 @@ jobs:
 
     steps:
        # the build is fully handled by the reusable github action
-      - name: T2 Image Build
+      - name: Image Build
         uses: blue-build/github-action@v1.6
         with:
           recipe: ${{ matrix.recipe }}
