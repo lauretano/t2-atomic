@@ -21,13 +21,12 @@ modules:
   - from-file: common-apps.yml
   - from-file: common-kansei.yml
   - from-file: common-way.yml #packages common to wayland compositor images
-
   - type: rpm-ostree
-      install:
-        - hyprland
-        - waybar
-        - xdg-desktop-portal-hyprland
-        - brightnessctl
+    install:
+      - hyprland
+      - waybar
+      - xdg-desktop-portal-hyprland
+      - brightnessctl
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
   

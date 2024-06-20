@@ -30,8 +30,8 @@ modules:
       - greetd-wlgreet
       - greetd-selinux
       - tofi
-      - sway-git
-      - sway-services
+      #- sway-git
+      #- sway-services
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
   
