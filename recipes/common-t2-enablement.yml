@@ -1,23 +1,28 @@
 modules:
   - type: rpm-ostree
     repos:
+      # thanks @SharpenedBlade for having these builds set up <3
       - https://copr.fedorainfracloud.org/coprs/sharpenedblade/t2linux/repo/fedora-%OS_VERSION%/sharpenedblade-t2linux-fedora-%OS_VERSION%.repo
  
-  # - type: script
-  #   snippets:
-  #     - "rpm-ostree cliwrap install-to-root / && \
-  #   rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:sharpenedblade:t2linux kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra"
-  #       # - "rpm-ostree kargs --append-if-missing=intel_iommu=on --append-if-missing=iommu=pt --append-if-missing=mem_sleep_default=s2idle"
-
   - type: script
     scripts:
-      - apple-bcm-firmware.sh # pulls firmware sources from arch-t2 mirror, uses asahi-installer fork to package for use in fedora
-      - t2-kernel.sh #overrides with T2 kernel, applies kernel args
-      - t2-internal-ethernet-blocklist.sh
-      #- apple-bce-load-early.sh #sets apple-bce and dependents to load early so keyboard works early
-      
+      # pull Wifi/BT firmware sources from arch-t2 mirror
+      # using asahi-installer fork to package for use in fedora
+      # it's hacky <3
+      - apple-bcm-firmware.sh
+
+      # install T2 kernel from @SharpenedBlade's t2linux copr
+      - t2-kernel.sh
+
   - type: rpm-ostree
     install:
+      # control the T2 active cooling
       - t2fanrd
+
+      # run the touchbar (as of 20240620 I hear Debian has a new apple-touchbar app that works well)
       - rust-tiny-dfr
+
+      # support sound (to some extent, depending on model). 
+      # Eventually a YAFTI-style onboarding experience will detect macbook pro model
+      # and suggest appropriate EQ profile (such as for MacBookPro 16,1-2)
       - t2linux-audio
