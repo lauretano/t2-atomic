@@ -2,15 +2,13 @@
 modules:
   - type: rpm-ostree
     install:
+      - tofi #launcher
+      #sddm
       - sddm
       - sddm-themes
       - qt5-qtgraphicaleffects
       - qt5-qtquickcontrols2
       - qt5-qtsvg
-
-    # launcher
-      - rofi-wayland
-
     # environment
       - power-profiles-daemon
       - xorg-x11-server-Xwayland
