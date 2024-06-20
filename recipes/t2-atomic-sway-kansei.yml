@@ -1,0 +1,25 @@
+#
+# 2024 Chris Lauretano <os@cdl.sh>
+#
+# Fedora Atomic spins for Apple T2
+
+name: t2-atomic-sway-kansei
+# description will be included in the image's metadata
+description: Fedora Atomic Sway (sericea) spin for Apple T2 Hardware
+
+base-image: ghcr.io/ublue-os/sericea-main
+image-version: 40
+
+modules:
+  - type: files
+    files:
+      - usr: /usr # copies config/files/usr into your image's /usr.
+                  # put configuration files you want in /etc/ on a booted system 
+                  # in /usr/etc/ in the image. read more in files module reference.
+
+  - from-file: common-t2-enablement.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
+  - from-file: common-apps.yml
+  - from-file: common-kansei.yml
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  
