@@ -41,7 +41,6 @@ modules:
         - org.gnome.baobab
         - org.gnome.Calendar
         - org.gnome.Characters
-        - org.gnome.Cheese
         - org.gnome.clocks
         - org.gnome.Connections
         - org.gnome.Contacts
@@ -59,12 +58,22 @@ modules:
         - ca.desrt.dconf-editor
         - com.mattjakeman.ExtensionManager
 
+
+- type: default-flatpaks
+    notify: false
+    system:
+      # If no repo information is specified, Flathub will be used by default
+      repo-url: https://nightly.gnome.org/gnome-nightly.flatpakrepo
+      repo-name: gnome-nightly
+      repo-title: "Gnome Nightly (system-wide)"
+      install:
+        - org.gnome.Showtime.Devel
+
   - type: gnome-extensions
     install:
       - Blur my Shell
       - Dash to Panel
       - Night Theme Switcher
-      - PaperWM
       - Display Scale Switcher
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
