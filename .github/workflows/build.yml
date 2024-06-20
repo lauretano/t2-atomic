@@ -1,8 +1,8 @@
 name: T2 Image Build
 on:
   schedule:
-    - cron: "00 17 * * *" # build at 17:00 UTC every day 
-                          # (20 minutes after last ublue images start building)
+    - cron: "00 16 * * *" # build at 16:00 UTC every day 
+                          # (~50 minutes after last ublue images start building)
   # push:
   #   paths-ignore: # don't rebuild if only documentation has changed
   #     - "**.md"
@@ -25,10 +25,11 @@ jobs:
           - t2-atomic-plasma.yml
           #- gnome-kansei.yml
           #- t2-atomic-cosmic.yml
-          - t2-atomic-cosmic-gnome.yml
-          #- t2-atomic-cosmic-plasma.yml
+          #- t2-atomic-cosmic-gnome.yml
+          - t2-atomic-cosmic-plasma.yml
           - t2-atomic-cosmic-kansei.yml
           - t2-atomic-sway-kansei.yml
+          - t2-atomic-hyprland-kansei.yml
 
     steps:
        # the build is fully handled by the reusable github action
