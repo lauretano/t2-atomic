@@ -21,7 +21,7 @@ modules:
   - from-file: common-apps.yml #installs apps common across all the t2 editions
   - from-file: common-apps-plasma.yml #and gnome flatpaks we have both here
   - from-file: common-kansei.yml
-  #- from-file: common-cosmic.yml
+  #- from-file: common-apps-cosmic.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
   

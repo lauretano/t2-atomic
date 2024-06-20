@@ -19,6 +19,7 @@ modules:
 
   - from-file: common-t2-enablement.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
   - from-file: common-apps.yml
+  #- from-file: common-apps-cosmic.yml
   - from-file: common-apps-gnome.yml #and gnome flatpaks etc because this has both
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
