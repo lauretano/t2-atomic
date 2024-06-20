@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 2024 kansei
+# 2024 kansei os@cdl.sh
 # simple script to load the modules required to use your keyboard for LUKS unlock on T2 Atomic
 
 # Tell this script to exit if there are any errors.
@@ -8,7 +8,7 @@
 set -oue pipefail
 
 
-echo 'T2-Atomic: Applying Configuration: Load apple-bce Early for LUKS Unlock'
+echo 'T2-Atomic: Kernel Modules: Load apple-bce Early, regenerate initramfs'
 
 # we need to set rpm-ostree to regenerate initramfs (believe this is needed every rpm-ostree upgrade), 
 #  but building the image on github actions? hmm
