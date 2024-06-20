@@ -16,10 +16,23 @@ modules:
       - usr: /usr # copies config/files/usr into your image's /usr.
                   # put configuration files you want in /etc/ on a booted system 
                   # in /usr/etc/ in the image. read more in files module reference.
+#to-do: separate etc for variants, merged together etc
 
   - from-file: common-t2-enablement.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
   - from-file: common-apps.yml
   - from-file: common-kansei.yml
 
+  - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/alebastr/sway-extras/repo/fedora-%OS_VERSION%/alebastr-sway-extras-fedora-%OS_VERSION%.repo
+
+    install:
+      - greetd-wlgreet
+      - greetd-selinux
+      - tofi
+      - sway-git
+      - sway-services
+
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
   
+

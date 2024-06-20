@@ -2,8 +2,6 @@
 modules:
   - type: rpm-ostree
     install:
-
-    #sddm
       - sddm
       - sddm-themes
       - qt5-qtgraphicaleffects
