@@ -1,0 +1,83 @@
+# modules and things general to all wayland compositor recipes
+modules:
+  - type: rpm-ostree
+    install:
+
+    #sddm
+      - sddm
+      - sddm-themes
+      - qt5-qtgraphicaleffects
+      - qt5-qtquickcontrols2
+      - qt5-qtsvg
+
+    # launcher
+      - rofi-wayland
+
+    # environment
+      - power-profiles-daemon
+      - xorg-x11-server-Xwayland
+      - polkit
+      - lxpolkit
+      - xdg-user-dirs
+      - dbus-tools
+      - dbus-daemon
+      - wl-clipboard
+      - gnome-keyring
+      - pavucontrol
+      - playerctl
+      - qt5-qtwayland
+      - qt6-qtwayland
+      - vulkan-validation-layers
+      - vulkan-tools
+      - google-noto-emoji-fonts
+      - gnome-disk-utility
+      
+    # sound
+      - wireplumber
+      - pipewire
+      - pamixer
+      - pulseaudio-utils
+
+    # networking
+      - network-manager-applet
+      - NetworkManager-openvpn
+      - NetworkManager-openconnect
+      - bluez
+      - bluez-tools
+      - blueman
+
+    # file manager
+      - thunar
+      - thunar-archive-plugin 
+      - thunar-volman
+      - xarchiver
+      - imv
+      - p7zip
+      - unrar-free
+
+    # screenshot
+      - slurp
+      - grim
+
+    # display
+      - wlr-randr
+      - wlsunset
+      - brightnessctl
+      - swaylock
+      - swayidle
+      - kanshi
+
+    # terminal
+      - foot
+
+    # notifications
+      - dunst
+
+    # theme and GUI
+      - adwaita-qt5
+      - fontawesome-fonts-all
+      - gnome-themes-extra
+      - gnome-icon-theme
+      - paper-icon-theme
+      - breeze-icon-theme 
+      - papirus-icon-theme
