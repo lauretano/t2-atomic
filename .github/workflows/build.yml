@@ -1,8 +1,8 @@
 name: T2 Image Build
 on:
   schedule:
-    - cron: "00 16 * * *" # build at 16:00 UTC every day 
-                          # (~50 minutes after last ublue images start building)
+    - cron: "45 15 * * *" # build at 15:45 UTC every day 
+                          # (~20-30 minutes after last ublue images start building)
   # push:
   #   paths-ignore: # don't rebuild if only documentation has changed
   #     - "**.md"
