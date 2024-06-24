@@ -3,8 +3,7 @@ modules:
   - type: rpm-ostree
     repos:
       # TEMP: this is hardcoded as rawhide as of 20240531 as f40 repo isn't yet available (brand new copr)
-      - https://copr.fedorainfracloud.org/coprs/ryanabx/cosmic-extras/repo/fedora-rawhide/ryanabx-cosmic-extras-fedora-rawhide.repo
-
+      - https://copr.fedorainfracloud.org/coprs/ryanabx/cosmic-epoch/repo/fedora-40/ryanabx-cosmic-epoch-fedora-%OS_VERSION%.repo
     install:
       - cosmic-desktop
 
