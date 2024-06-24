@@ -4,7 +4,7 @@
 # my personal opinionated workstation setup in progress.
 
 # image will be published to ghcr.io/<user>/<name>
-name: t2-atomic-kansei
+name: t2-atomic-gnome-kansei
 # description will be included in the image's metadata
 description: personal opinionated Fedora Atomic workstation (for Apple T2 Hardware)
 
