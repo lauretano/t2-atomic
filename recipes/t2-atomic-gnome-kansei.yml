@@ -71,7 +71,6 @@ modules:
 
   - type: gnome-extensions
     install:
-      - Blur my Shell
       - Dash to Panel
       - Night Theme Switcher
       - Display Scale Switcher

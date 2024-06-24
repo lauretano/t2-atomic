@@ -7,7 +7,7 @@ name: t2-atomic-cosmic-plasma
 # description will be included in the image's metadata
 description: Fedora Atomic Cosmic (added to kinoite) spin for Apple T2 Hardware
 
-base-image: ghcr.io/ublue-os/cosmic-kinoite
+base-image: ghcr.io/ublue-os/kinoite-main
 image-version: 40
 
 modules:
@@ -18,8 +18,8 @@ modules:
                   # in /usr/etc/ in the image. read more in files module reference.
 
   - from-file: common-t2-enablement.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
+  - from-file: common-apps-cosmic.yml
   - from-file: common-apps.yml
- #- from-file: common-apps-cosmic.yml
   - from-file: common-apps-plasma.yml #and plasma flatpaks etc because this has both
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
