@@ -11,16 +11,13 @@ base-image: ghcr.io/ublue-os/kinoite-main
 image-version: 40
 
 modules:
-  - type: files
-    files:
-      - usr: /usr # copies config/files/usr into your image's /usr.
-                  # put configuration files you want in /etc/ on a booted system 
-                  # in /usr/etc/ in the image. read more in files module reference.
-
-  - from-file: common-t2-enablement.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
-  - from-file: common-apps-cosmic.yml
-  - from-file: common-apps.yml
-  - from-file: common-apps-plasma.yml #and plasma flatpaks etc because this has both
+  - from-file: common/common-t2-enablement.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
+  - from-file: common/common-files.yml
+  - from-file: common/common-files-cosmic.yml
+  - from-file: common/common-files-plasma.yml
+  - from-file: common/common-apps-cosmic.yml
+  - from-file: common/common-apps.yml
+  - from-file: common/common-apps-plasma.yml #and plasma flatpaks etc because this has both
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
   

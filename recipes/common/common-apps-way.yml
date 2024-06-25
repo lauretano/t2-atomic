@@ -88,4 +88,4 @@ modules:
       - tofi
   - type: script
     snippets: 
-      - "ln -sfn /usr/lib/systemd/system/greetd_wlgreet.service /etc/systemd/system/display-manager.service"
+      - "ln -sfn /usr/lib/systemd/system/greetd.service /etc/systemd/system/display-manager.service"

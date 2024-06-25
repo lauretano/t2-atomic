@@ -1,0 +1,3 @@
+type: files
+files:
+  - gnome/usr: /usr
