@@ -31,7 +31,7 @@ modules:
       - wireplumber
       - pipewire
       - pamixer
-      - pipewire-pulse
+      - pipewire-pulseaudio
       #- pulseaudio-utils
 
     # networking
