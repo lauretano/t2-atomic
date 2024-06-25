@@ -2,6 +2,7 @@
 modules:
   - type: rpm-ostree
     install:
+      - fish
       - stress-ng
       - cascadia-fonts-all
 
