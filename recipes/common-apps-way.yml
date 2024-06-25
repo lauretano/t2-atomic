@@ -3,11 +3,11 @@ modules:
   - type: rpm-ostree
     install:
       #sddm
-      - sddm
-      - sddm-themes
-      - qt5-qtgraphicaleffects
-      - qt5-qtquickcontrols2
-      - qt5-qtsvg
+      #- sddm
+      #- sddm-themes
+      #- qt5-qtgraphicaleffects
+      #- qt5-qtquickcontrols2
+      #- qt5-qtsvg
     # environment
       - power-profiles-daemon
       - xorg-x11-server-Xwayland
@@ -31,7 +31,8 @@ modules:
       - wireplumber
       - pipewire
       - pamixer
-      - pulseaudio-utils
+      - pipewire-pulse
+      #- pulseaudio-utils
 
     # networking
       - network-manager-applet
@@ -82,6 +83,9 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/alebastr/sway-extras/repo/fedora-%OS_VERSION%/alebastr-sway-extras-fedora-%OS_VERSION%.repo
 
     install:
-      #- greetd-wlgreet
-      #- greetd-selinux
+      - greetd-wlgreet
+      - greetd-selinux
       - tofi
+  - type: script
+    snippets: 
+      - "ln -sfn /usr/lib/systemd/system/greetd_wlgreet.service /etc/systemd/system/display-manager.service"

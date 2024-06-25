@@ -4,6 +4,9 @@ modules:
     install:
       - fish
       - stress-ng
+      - cockpit-ostree
+      - powertop
+      - lm_sensors
       - cascadia-fonts-all
 
   #- type: rpm-ostree
@@ -33,14 +36,6 @@ modules:
         - re.sonny.Junction
         - app.devsuite.Ptyxis
 
-  - type: rpm-ostree
-    install:
-      - cockpit-ostree
-      - powertop
-      - lm_sensors
-      - fish
-
-
-  #- type: brew
-    # Control Brew analytics
-  #  brew-analytics: false # Optional - Default: true - Expects type: boolean
+- type: brew
+  # Control Brew analytics
+  brew-analytics: false # Optional - Default: true - Expects type: boolean
