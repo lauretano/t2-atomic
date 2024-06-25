@@ -1,8 +1,8 @@
 name: T2 Image Build
 on:
   schedule:
-    - cron: "45 15 * * *" # build at 15:45 UTC every day 
-                          # (~20-30 minutes after last ublue images start building)
+    - cron: "30 3 * * *" # build at 03:30 UTC every day 
+                          # (ublue main images build a bit after 03:00)
   # push:
   #   paths-ignore: # don't rebuild if only documentation has changed
   #     - "**.md"
@@ -21,14 +21,15 @@ jobs:
       fail-fast: false # stop GH from cancelling all matrix builds if one fails
       matrix:
         recipe:
-          - t2-atomic-gnome.yml
-          - t2-atomic-plasma.yml
-          #- t2-atomic-plasma-kansei.yml
-          #- gnome-kansei.yml
           #- t2-atomic-cosmic.yml
           - t2-atomic-cosmic-gnome.yml
           #- t2-atomic-cosmic-plasma.yml
           - t2-atomic-cosmic-kansei.yml
+          - t2-atomic-gnome.yml
+          - t2-atomic-plasma.yml
+          #- t2-atomic-plasma-kansei.yml
+          #- gnome-kansei.yml
+
           - t2-atomic-sway.yml
           - t2-atomic-hyprland.yml
 
