@@ -1,0 +1,8 @@
+modules:
+  - type: rpm-ostree
+    install:
+      - tuigreet
+
+  - type: script
+    snippets: 
+      - "ln -sfn /usr/lib/systemd/system/greetd.service /etc/systemd/system/display-manager.service"
