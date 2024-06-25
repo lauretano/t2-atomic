@@ -26,12 +26,10 @@ jobs:
           #- t2-atomic-cosmic-plasma.yml
           - t2-atomic-cosmic-kansei.yml
           - t2-atomic-gnome.yml
+          - t2-atomic-hyprland.yml
           - t2-atomic-plasma.yml
           #- t2-atomic-plasma-kansei.yml
-          #- gnome-kansei.yml
-
           - t2-atomic-sway.yml
-          - t2-atomic-hyprland.yml
 
     steps:
        # the build is fully handled by the reusable github action
