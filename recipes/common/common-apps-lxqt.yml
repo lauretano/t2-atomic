@@ -1,0 +1,53 @@
+# modules and things general to all lxqt recipes
+modules:
+  - type: rpm-ostree
+    install:
+      - libqtxdg
+      - kvantum
+      - kwin-x11
+      - kwin-wayland
+      - plasma-systemsettings
+      # Portals for Flatpak
+      - xdg-desktop-portal-kde
+
+    #lxqt but not fedora specific things
+      - breeze-cursor-theme
+      - breeze-gtk
+      - breeze-icon-theme
+      - firewall-config
+      - glx-utils
+      - initial-setup-gui
+      - lxqt-about
+      - lxqt-archiver
+      - lxqt-config
+      - lxqt-globalkeys
+      - lxqt-notificationd
+      - lxqt-openssh-askpass
+      - lxqt-panel
+      - lxqt-policykit
+      - lxqt-powermanagement
+      - lxqt-qtplugin
+      - lxqt-runner
+      - lxqt-session
+      - lxqt-themes
+      - lxqt-themes-fedora
+      - mesa-dri-drivers
+      - mesa-vulkan-drivers
+      - network-manager-applet
+      - nm-connection-editor
+      - notification-daemon
+      - obconf
+      - openbox
+      - pcmanfm-qt
+      - perl-File-MimeInfo
+      - plymouth-system-theme
+      - qterminal
+      - sddm
+      - sddm-themes
+      - sddm-x11
+      - upower
+      - xdg-user-dirs
+
+  - type: script
+    snippets: 
+      - "ln -sfn /usr/lib/systemd/system/sddm.service /etc/systemd/system/display-manager.service"
