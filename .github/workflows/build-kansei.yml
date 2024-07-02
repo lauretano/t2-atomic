@@ -1,4 +1,4 @@
-name: T2 Image Build
+name: T2 Kansei Image Build
 on:
   schedule:
     - cron: "30 16 * * *" # build at 16:30 UTC every day 
