@@ -31,6 +31,7 @@ jobs:
           - t2-atomic-plasma.yml
           #- t2-atomic-plasma-kansei.yml
           - t2-atomic-sway.yml
+          - t2-atomic-sway-kansei.yml
 
     steps:
        # the build is fully handled by the reusable github action
