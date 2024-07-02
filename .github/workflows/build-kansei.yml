@@ -1,8 +1,8 @@
-name: T2 Main Image Build
+name: T2 Image Build
 on:
   schedule:
-    - cron: "30 3 * * *" # build at 03:30 UTC every day 
-                          # (ublue main images build a bit after 03:00)
+    - cron: "30 16 * * *" # build at 16:30 UTC every day 
+                          # (ublue main images build a bit after 03:00 UTC)
   # push:
   #   paths-ignore: # don't rebuild if only documentation has changed
   #     - "**.md"
@@ -18,20 +18,20 @@ jobs:
       packages: write
       id-token: write
     strategy:
-      fail-fast: false # stop GH from cancelling all matrix builds if one fails
+      fail-fast: true # stop GH from cancelling all matrix builds if one fails
       matrix:
         recipe:
           #- t2-atomic-cosmic.yml
-          - t2-atomic-cosmic-gnome.yml
+          #- t2-atomic-cosmic-gnome.yml
           #- t2-atomic-cosmic-plasma.yml
-          #- t2-atomic-cosmic-kansei.yml
-          - t2-atomic-gnome.yml
+          - t2-atomic-cosmic-kansei.yml
+          #- t2-atomic-gnome.yml
           #- t2-atomic-hyprland.yml
-          #- t2-atomic-lxqt.yml
-          - t2-atomic-plasma.yml
+          - t2-atomic-lxqt.yml
+          #- t2-atomic-plasma.yml
           #- t2-atomic-plasma-kansei.yml
-          - t2-atomic-sway.yml
-          #- t2-atomic-sway-kansei.yml
+          #- t2-atomic-sway.yml
+          - t2-atomic-sway-kansei.yml
 
     steps:
        # the build is fully handled by the reusable github action
