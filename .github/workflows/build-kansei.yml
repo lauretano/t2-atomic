@@ -1,7 +1,7 @@
 name: T2 Kansei Image Build
 on:
   schedule:
-    - cron: "30 16 * * *" # build at 16:30 UTC every day 
+    - cron: "00 10 * * *" # build at 10:00 UTC every day 
                           # (ublue main images build a bit after 03:00 UTC)
   # push:
   #   paths-ignore: # don't rebuild if only documentation has changed
