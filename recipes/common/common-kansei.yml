@@ -4,7 +4,7 @@ modules:
     install:
       - fish
       - s-tui
-      - stress
+      - stress-ng
       - cockpit-ostree
       - powertop
       - lm_sensors
