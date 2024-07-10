@@ -3,7 +3,8 @@ modules:
   - type: rpm-ostree
     install:
       - fish
-      - stress-ng
+      - s-tui
+      - stress
       - cockpit-ostree
       - powertop
       - lm_sensors
