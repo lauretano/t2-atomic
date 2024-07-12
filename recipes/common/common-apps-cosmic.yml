@@ -12,8 +12,3 @@ modules:
     install:
       - tuned
       - gnome-keyring
-
-
-  - type: script
-    snippets: 
-      - "ln -sfn /usr/lib/systemd/system/cosmic-greeter.service /etc/systemd/system/display-manager.service"
