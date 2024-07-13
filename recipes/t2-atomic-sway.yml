@@ -26,6 +26,8 @@ modules:
       #- sway-git
       #- sway-services
 
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
-  
+  - type: script
+    snippets: 
+      - "ln -sfn /usr/lib/systemd/system/greetd.service /etc/systemd/system/display-manager.service"
 
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
