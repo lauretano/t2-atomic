@@ -9,6 +9,8 @@ modules:
       - powertop
       - lm_sensors
       - cascadia-fonts-all
+      - tailscale
+      - mc
 
   #- type: rpm-ostree
   #  repos:
