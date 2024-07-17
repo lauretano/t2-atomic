@@ -5,6 +5,7 @@ modules:
       - sway-wallpapers
       - greetd-selinux
       - tuigreet
+      - gtkgreet
       #sddm
       #- sddm
       #- sddm-themes
@@ -69,6 +70,7 @@ modules:
 
     # terminal
       - foot
+      - alacritty
 
     # notifications
       - dunst
