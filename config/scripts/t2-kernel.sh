@@ -11,8 +11,7 @@ rpm-ostree cliwrap install-to-root / && \
     rpm-ostree override replace --experimental \
     --from repo=copr:copr.fedorainfracloud.org:sharpenedblade:t2linux \
     kernel kernel-core \
-    kernel-modules kernel-modules-core \
-    kernel-tools kernel-modules-extra
+    kernel-modules kernel-modules-core kernel-modules-extra
   
 
 echo 'T2-Atomic: Kernel Post-Install: on bare betal, kernel arguments for thunderbolt, iommu, and S2idle will be applied by a startup script.'
