@@ -93,3 +93,4 @@ modules:
   - type: script
     snippets: 
       - "ln -sfn /usr/lib/systemd/system/greetd.service /etc/systemd/system/display-manager.service"
+      - "sed -i '/^UseIn/ s/$/\,sway/' /usr/share/xdg-desktop-portal/portals/gnome-keyring.portal"
