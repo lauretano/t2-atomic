@@ -25,12 +25,10 @@ modules:
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
         - io.github.dvlv.boxbuddyrs
-        - org.chromium.Chromium
         - com.discordapp.Discord
         - com.github.tchx84.Flatseal
         - io.freetubeapp.FreeTube
         - it.mijorus.gearlever
-        - rg.fedoraproject.MediaWriter
         - io.missioncenter.MissionCenter
         - md.obsidian.Obsidian
         - com.prusa3d.PrusaSlicer
