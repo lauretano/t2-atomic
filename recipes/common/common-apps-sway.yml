@@ -2,16 +2,18 @@
 modules:
   - type: rpm-ostree
     install:
-      - sway-wallpapers
+      # greeters from main repos
       - greetd-selinux
       - tuigreet
       - gtkgreet
-      #sddm
+
+      #sddm we don't use it but one could
       #- sddm
       #- sddm-themes
       #- qt5-qtgraphicaleffects
       #- qt5-qtquickcontrols2
       #- qt5-qtsvg
+
     # environment
       - power-profiles-daemon
       - xorg-x11-server-Xwayland
@@ -30,6 +32,7 @@ modules:
       - vulkan-tools
       - google-noto-emoji-fonts
       - gnome-disk-utility
+      - sway-systemd
       
     # sound
       - wireplumber
@@ -83,13 +86,13 @@ modules:
       - paper-icon-theme
       - breeze-icon-theme 
       - papirus-icon-theme
+      - sway-wallpapers
 
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/alebastr/sway-extras/repo/fedora-%OS_VERSION%/alebastr-sway-extras-fedora-%OS_VERSION%.repo
     install:
       - greetd-wlgreet
-      - sway-services
       - swww
       - tofi
 
