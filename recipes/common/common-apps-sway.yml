@@ -88,7 +88,11 @@ modules:
     repos:
       - https://copr.fedorainfracloud.org/coprs/alebastr/sway-extras/repo/fedora-%OS_VERSION%/alebastr-sway-extras-fedora-%OS_VERSION%.repo
     install:
+      - greetd-wlgreet
+      - sway-services
+      - swww
       - tofi
+
       
   - type: script
     snippets: 

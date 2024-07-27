@@ -1,6 +1,6 @@
 #reference: https://man.sr.ht/~kennylevinsen/greetd/#using-sway-for-gtkgreet
 # pulled: 20240620
-exec "gtkgreet --command sway; swaymsg exit"
+exec "wlgreet --command sway; swaymsg exit"
 
 bindsym Mod4+shift+e exec swaynag \
 	-t warning \
