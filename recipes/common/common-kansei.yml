@@ -37,6 +37,6 @@ modules:
         - re.sonny.Junction
         - app.devsuite.Ptyxis
 
-  - type: brew
+  #- type: brew
     # Control Brew analytics
-    brew-analytics: false # Optional - Default: true - Expects type: boolean
+    #brew-analytics: false # Optional - Default: true - Expects type: boolean
