@@ -28,7 +28,7 @@ modules:
 
     install:
       - tofi
-      #- sway-git
+      - sway-git
       #- sway-services
 
   - type: script
