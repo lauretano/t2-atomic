@@ -11,7 +11,14 @@ modules:
       - cascadia-fonts-all
       - tailscale
       - mc
-      - tuigreet
+      
+      # bits for fedora QA
+      - gcc
+      - python3-openidc-client
+      - make
+      #- libtirpc
+      - libtirpc-devel
+      #- policycoreutils-python-utils
 
   #- type: rpm-ostree
   #  repos:
