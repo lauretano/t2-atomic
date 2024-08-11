@@ -70,6 +70,9 @@ modules:
       - swaylock
       - swayidle
       - kanshi
+    # menu
+      - wmenu
+      - waybar
 
     # terminal
       - foot
@@ -87,6 +90,7 @@ modules:
       - breeze-icon-theme 
       - papirus-icon-theme
       - sway-wallpapers
+  
 
   - type: rpm-ostree
     repos:
