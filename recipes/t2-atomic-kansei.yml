@@ -3,7 +3,7 @@
 #
 # Fedora Atomic spins for Apple T2
 
-name: t2-atomic-kansei
+name: t2-atomic-sway-kansei
 # description will be included in the image's metadata
 description: Fedora Atomic Personal Spin
 base-image: ghcr.io/ublue-os/kinoite-main

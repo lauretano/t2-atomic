@@ -33,7 +33,6 @@ modules:
       - vulkan-tools
       - google-noto-emoji-fonts
       - gnome-disk-utility
-      - sway-systemd
       
     # sound
       - helvum
