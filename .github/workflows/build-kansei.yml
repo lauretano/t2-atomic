@@ -25,7 +25,6 @@ jobs:
           #- t2-atomic-cosmic-gnome.yml
           #- t2-atomic-cosmic-plasma.yml
           - t2-atomic-kansei.yml
-          - t2-atomic-bluefin-dx.yml
           #- t2-atomic-gnome.yml
           #- t2-atomic-hyprland.yml
           #- t2-atomic-lxqt.yml
