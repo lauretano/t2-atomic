@@ -1,3 +1,4 @@
 type: files
 files:
-  - gnome/usr: /usr
+  - system/gnome/usr: /usr
+  - system/gnome/etc: /etc

@@ -1,3 +1,4 @@
 type: files
 files:
-  - plasma/usr: /usr
+  - system/plasma/usr: /usr
+  - system/plasma/etc: /etc

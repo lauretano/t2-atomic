@@ -2,12 +2,14 @@
 modules:
   - type: rpm-ostree
     install:
-      # greeters from main repos
+      # greeters from main repos. spins that also include cosmic will include their config for greetd which doesn't conflict with these.
+      # /etc/greetd/config.toml needs configuration to use tuigreet or gtkgreet, but will work with agreety (basic terminal login) out of the box.
       - greetd-selinux
       - tuigreet
       - gtkgreet
 
-      #sddm we don't use it but one could
+      #sddm we don't use it but one could with a systemctl enable sddm
+
       - sddm
       - sddm-themes
       - qt5-qtgraphicaleffects
@@ -24,7 +26,6 @@ modules:
       - dbus-daemon
       - wl-clipboard
       - gnome-keyring
-      - pavucontrol
       - playerctl
       - qt5-qtwayland
       - qt6-qtwayland
@@ -35,6 +36,8 @@ modules:
       - sway-systemd
       
     # sound
+      - helvum
+      - pavucontrol
       - wireplumber
       - pipewire
       - pamixer
@@ -50,10 +53,12 @@ modules:
       - blueman
 
     # file manager
+      # we install pcmanfm, thunar, and mc to give people choices
       - pcmanfm
       - thunar
       - thunar-archive-plugin 
       - thunar-volman
+      - mc
       - xarchiver
       - imv
       - p7zip
@@ -76,7 +81,12 @@ modules:
 
     # terminal
       - foot
-      - alacritty
+      - alacritty 
+      - kitty
+
+    # cli utils
+      - s-tui
+      - fastfetch
 
     # notifications
       - dunst
@@ -94,11 +104,16 @@ modules:
 
   - type: rpm-ostree
     repos:
-      - https://copr.fedorainfracloud.org/coprs/alebastr/sway-extras/repo/fedora-%OS_VERSION%/alebastr-sway-extras-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-%OS_VERSION%/swayfx-swayfx-fedora-%OS_VERSION%.repo
     install:
-      - greetd-wlgreet
-      - swww
-      - tofi
+      - swayfx
+      - scenefx
+
+  - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%OS_VERSION%/erikreider-SwayNotificationCenter-fedora-%OS_VERSION%.repo
+    install:
+      - SwayNotificationCenter
 
       
   - type: script

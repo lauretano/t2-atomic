@@ -18,6 +18,7 @@ modules:
       - make
       #- libtirpc
       - libtirpc-devel
+      - fedora-easy-karma
       #- policycoreutils-python-utils
 
   #- type: rpm-ostree

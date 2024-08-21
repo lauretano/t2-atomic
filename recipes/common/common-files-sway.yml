@@ -1,3 +1,4 @@
 type: files
 files:
-  - sway/usr: /usr
+  - system/sway/usr: /usr
+  - system/sway/etc: /etc

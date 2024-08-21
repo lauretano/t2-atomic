@@ -1,3 +1,4 @@
 type: files
 files:
-  - lxqt/usr: /usr
+  - system/lxqt/usr: /usr
+  - system/lxqt/etc: /etc
