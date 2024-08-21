@@ -18,7 +18,7 @@ jobs:
       packages: write
       id-token: write
     strategy:
-      fail-fast: true # stop GH from cancelling all matrix builds if one fails
+      fail-fast: false # stop GH from cancelling all matrix builds if one fails
       matrix:
         recipe:
           #- t2-atomic-cosmic.yml
