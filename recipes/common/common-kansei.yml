@@ -11,6 +11,9 @@ modules:
       - cascadia-fonts-all
       - tailscale
       - mc
+      - gnome-disks
+      - mozilla-fira-sans-fonts
+      - mozilla-fira-mono-fonts
       
       # bits for fedora QA
       - gcc

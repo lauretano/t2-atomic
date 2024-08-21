@@ -101,9 +101,12 @@ modules:
       - papirus-icon-theme
       - sway-wallpapers
 
-  - type: script
-    scripts:
-      - swayfx.sh
+  - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-%OS_VERSION%/swayfx-swayfx-fedora-%OS_VERSION%.repo
+    install:
+      - swayfx
+      - scenefx
 
   - type: rpm-ostree
     repos:
@@ -111,7 +114,6 @@ modules:
     install:
       - SwayNotificationCenter
 
-      
   - type: script
     snippets: 
       - "ln -sfn /usr/lib/systemd/system/greetd.service /etc/systemd/system/display-manager.service"

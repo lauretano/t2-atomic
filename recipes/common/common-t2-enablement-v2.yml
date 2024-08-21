@@ -1,9 +1,5 @@
 modules:
-  - type: rpm-ostree
-    repos:
-      # thanks @SharpenedBlade for having these builds set up <3
-      - https://copr.fedorainfracloud.org/coprs/sharpenedblade/t2linux/repo/fedora-%OS_VERSION%/sharpenedblade-t2linux-fedora-%OS_VERSION%.repo
- 
+
   - type: script
     scripts:
       # pull Wifi/BT firmware sources from arch-t2 mirror
@@ -11,10 +7,11 @@ modules:
       # it's hacky <3
       - apple-bcm-firmware.sh
 
-      # install T2 kernel from @SharpenedBlade's t2linux copr
-      #- t2-kernel.sh
-
   - type: rpm-ostree
+    repos:
+      # thanks @SharpenedBlade for having these builds set up <3
+      - https://copr.fedorainfracloud.org/coprs/sharpenedblade/t2linux/repo/fedora-%OS_VERSION%/sharpenedblade-t2linux-fedora-%OS_VERSION%.repo
+ 
     install:
       # control the T2 active cooling
       - t2fanrd

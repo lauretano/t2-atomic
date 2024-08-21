@@ -1,0 +1,16 @@
+#
+# 2024 Chris Lauretano <os@cdl.sh>
+#
+# this is an experiment to get silverblue properly operational on T2 macs
+
+name: t2-atomic-bluefin-dx
+# description will be included in the image's metadata
+description: Bluefin Repackaged for Apple T2 Hardware.
+
+base-image: ghcr.io/ublue-os/bluefin-dx
+image-version: 40
+
+modules:
+  - from-file: common/common-t2-enablement-v2.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  
