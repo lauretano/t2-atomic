@@ -1,0 +1,28 @@
+modules:
+  - type: rpm-ostree
+    repos:
+      # thanks @SharpenedBlade for having these builds set up <3
+      - https://copr.fedorainfracloud.org/coprs/sharpenedblade/t2linux/repo/fedora-%OS_VERSION%/sharpenedblade-t2linux-fedora-%OS_VERSION%.repo
+ 
+  - type: script
+    scripts:
+      # pull Wifi/BT firmware sources from arch-t2 mirror
+      # using asahi-installer fork to package for use in fedora
+      # it's hacky <3
+      - apple-bcm-firmware.sh
+
+      # install T2 kernel from @SharpenedBlade's t2linux copr
+      #- t2-kernel.sh
+
+  - type: rpm-ostree
+    install:
+      # control the T2 active cooling
+      - t2fanrd
+
+      # run the touchbar (as of 20240620 I hear Debian has a new apple-touchbar app that works well)
+      - rust-tiny-dfr
+
+      # support sound (to some extent, depending on model). 
+      # Eventually a YAFTI-style onboarding experience will detect macbook pro model
+      # and suggest appropriate EQ profile (such as for MacBookPro 16,1-2)
+      - t2linux-audio
