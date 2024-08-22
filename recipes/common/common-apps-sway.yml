@@ -17,6 +17,9 @@ modules:
       - qt5-qtsvg
 
     # environment
+      - sway-config-fedora
+      - sway-systemd
+      - sway
       - power-profiles-daemon
       - xorg-x11-server-Xwayland
       - polkit
@@ -33,7 +36,7 @@ modules:
       - vulkan-tools
       - google-noto-emoji-fonts
       - gnome-disk-utility
-      - sway-systemd
+
       
     # sound
       - helvum
