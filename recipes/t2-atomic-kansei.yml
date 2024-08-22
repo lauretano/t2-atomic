@@ -14,7 +14,7 @@ modules:
   #- from-file: common/common-apps-plasma.yml
   - from-file: common/common-apps-cosmic.yml
   - from-file: common/common-apps.yml #installs apps common across all the t2 editions
-  - from-file: common/common-apps-swayfx.yml #and gnome flatpaks we have both here
+  - from-file: common/common-apps-sway.yml #and gnome flatpaks we have both here
   - from-file: common/common-kansei.yml
   - from-file: common/common-files.yml
   #- from-file: common/common-files-plasma.yml
