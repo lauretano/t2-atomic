@@ -8,7 +8,7 @@ name: t2-atomic-bluefin-dx
 description: Bluefin Repackaged for Apple T2 Hardware.
 
 base-image: ghcr.io/ublue-os/bluefin-dx
-image-version: 40
+image-version: latest
 
 modules:
   - from-file: common/common-t2-enablement-v2.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
