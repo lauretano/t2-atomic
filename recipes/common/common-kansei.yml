@@ -13,19 +13,14 @@ modules:
       - mc
       - mozilla-fira-sans-fonts
       - mozilla-fira-mono-fonts
+      - gnome-pomodoro
       
       # bits for fedora QA
       - gcc
       - python3-openidc-client
       - make
-      #- libtirpc
       - libtirpc-devel
       - fedora-easy-karma
-      #- policycoreutils-python-utils
-
-  #- type: rpm-ostree
-  #  repos:
-  #    - https://downloads.1password.com/linux/rpm/stable/x86_64
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
@@ -38,7 +33,6 @@ modules:
         - io.github.dvlv.boxbuddyrs
         - com.discordapp.Discord
         - com.github.tchx84.Flatseal
-        - io.freetubeapp.FreeTube
         - it.mijorus.gearlever
         - io.missioncenter.MissionCenter
         - md.obsidian.Obsidian
@@ -46,7 +40,6 @@ modules:
         - im.riot.Riot
         - org.raspberrypi.rpi-imager
         - re.sonny.Junction
-        - app.devsuite.Ptyxis
 
   #- type: brew
     # Control Brew analytics
