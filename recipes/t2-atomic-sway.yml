@@ -17,15 +17,6 @@ modules:
   - from-file: common/common-apps-sway.yml
   - from-file: common/common-apps.yml
 
-  - type: rpm-ostree
-    repos:
-      - https://copr.fedorainfracloud.org/coprs/alebastr/sway-extras/repo/fedora-%OS_VERSION%/alebastr-sway-extras-fedora-%OS_VERSION%.repo
-
-    install:
-      - tofi
-      #- sway-git
-      #- sway-services
-
   - type: script
     snippets: 
       - "ln -sfn /usr/lib/systemd/system/greetd.service /etc/systemd/system/display-manager.service"
