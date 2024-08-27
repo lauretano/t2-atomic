@@ -1,8 +1,0 @@
-#reference: https://man.sr.ht/~kennylevinsen/greetd/#using-sway-for-gtkgreet
-# pulled: 20240620
-[terminal]
-vt = 1
-
-[default_session]
-command = "Hyprland --config /etc/greetd/hyprland.conf"
-user = "greeter"

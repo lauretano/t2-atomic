@@ -1,4 +1,0 @@
-type: files
-files:
-  - system/lxqt/usr: /usr
-  - system/lxqt/etc: /etc

@@ -1,4 +1,0 @@
-type: files
-files:
-  - system/hyprland/usr: /usr
-  - system/hyprland/etc: /etc
