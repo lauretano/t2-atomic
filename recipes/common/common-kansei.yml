@@ -40,7 +40,3 @@ modules:
         - im.riot.Riot
         - org.raspberrypi.rpi-imager
         - re.sonny.Junction
-
-  #- type: brew
-    # Control Brew analytics
-    #brew-analytics: false # Optional - Default: true - Expects type: boolean
