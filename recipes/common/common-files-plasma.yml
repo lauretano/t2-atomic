@@ -1,4 +1,6 @@
 type: files
 files:
-  - system/plasma/usr: /usr
-  - system/plasma/etc: /etc
+  - source: system/plasma/etc
+    destination: /etc
+  - source: system/plasma/usr
+    destination: /usr
