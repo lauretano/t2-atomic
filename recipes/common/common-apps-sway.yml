@@ -37,6 +37,7 @@ modules:
       - google-noto-emoji-fonts
       - gnome-disk-utility
       - rofi-wayland
+      - rofimoji
 
       
     # sound
@@ -116,6 +117,9 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/alebastr/sway-extras/repo/fedora-%OS_VERSION%/alebastr-sway-extras-fedora-%OS_VERSION%.repo
     install:
       - swayimg
+      - poweralertd
+      - pinentry-rofi
+      - swww
       
   - type: script
     snippets: 
