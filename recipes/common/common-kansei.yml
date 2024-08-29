@@ -40,3 +40,13 @@ modules:
         - im.riot.Riot
         - org.raspberrypi.rpi-imager
         - re.sonny.Junction
+
+  - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%OS_VERSION%/erikreider-SwayNotificationCenter-fedora-%OS_VERSION%.repo
+    install:
+      - SwayNotificationCenter
+
+  - type: bling
+    install:
+      - 1password

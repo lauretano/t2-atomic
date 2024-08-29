@@ -1,0 +1,6 @@
+type: files
+files:
+  - source: system/kansei/etc
+    destination: /etc
+  - source: system/kansei/usr
+    destination: /usr
