@@ -38,6 +38,7 @@ modules:
       - gnome-disk-utility
       - rofi-wayland
       - rofimoji
+      - chayang
 
       
     # sound
