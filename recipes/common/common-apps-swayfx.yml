@@ -113,6 +113,15 @@ modules:
     install:
       - SwayNotificationCenter
 
+ - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/alebastr/sway-extras/repo/fedora-%OS_VERSION%/alebastr-sway-extras-fedora-%OS_VERSION%.repo
+    install:
+      - swayimg
+      - poweralertd
+      - pinentry-rofi
+      - swww
+      
   - type: script
     snippets: 
       - "ln -sfn /usr/lib/systemd/system/greetd.service /etc/systemd/system/display-manager.service"
