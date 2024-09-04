@@ -5,7 +5,7 @@
 
 name: t2-atomic-sway-kansei
 # description will be included in the image's metadata
-description: TEST: Personal Sway spin testing area, swayfx or similar
+description: TEST Personal Sway spin testing area, swayfx or similar
 
 base-image: ghcr.io/ublue-os/sericea-main
 image-version: 40
