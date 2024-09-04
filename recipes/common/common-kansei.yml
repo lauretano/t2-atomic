@@ -1,8 +1,6 @@
 # this applies the kansei edition apps and modifications
 modules:
   - type: rpm-ostree
-    remove:
-      - vim
     install:
       - fish
       - s-tui
