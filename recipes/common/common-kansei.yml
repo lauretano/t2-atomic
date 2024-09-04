@@ -1,6 +1,8 @@
 # this applies the kansei edition apps and modifications
 modules:
   - type: rpm-ostree
+    remove:
+      - vim
     install:
       - fish
       - s-tui
@@ -14,6 +16,7 @@ modules:
       - mozilla-fira-sans-fonts
       - mozilla-fira-mono-fonts
       - gnome-pomodoro
+      - neovim
       
       # bits for fedora QA
       - gcc
@@ -40,6 +43,8 @@ modules:
         - im.riot.Riot
         - org.raspberrypi.rpi-imager
         - re.sonny.Junction
+        - io.gitlab.librewolf-community
+        
 
   - type: rpm-ostree
     repos:

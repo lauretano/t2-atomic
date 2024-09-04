@@ -6,19 +6,19 @@
 name: t2-atomic-kansei
 # description will be included in the image's metadata
 description: Fedora Atomic Personal Spin
-base-image: ghcr.io/ublue-os/bluefin-dx
+base-image: ghcr.io/ublue-os/sericea-main
 image-version: latest
 
 modules:
-  - from-file: common/common-t2-enablement-v2.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
-  #- from-file: common/common-apps-plasma.yml
-  - from-file: common/common-apps-cosmic.yml
+  - from-file: common/common-t2-enablement.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
+  - from-file: common/common-apps-plasma.yml
+  #- from-file: common/common-apps-cosmic.yml
   - from-file: common/common-apps.yml #installs apps common across all the t2 editions
   - from-file: common/common-apps-sway.yml #and gnome flatpaks we have both here
   - from-file: common/common-kansei.yml
   - from-file: common/common-files.yml
-  #- from-file: common/common-files-plasma.yml
-  - from-file: common/common-files-cosmic.yml
+  - from-file: common/common-files-plasma.yml
+  #- from-file: common/common-files-cosmic.yml
   - from-file: common/common-files-sway.yml
 
   - type: script
