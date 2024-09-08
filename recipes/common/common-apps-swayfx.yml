@@ -1,5 +1,6 @@
 # modules and things general to all wayland compositor recipes
 modules:
+
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-%OS_VERSION%/swayfx-swayfx-fedora-%OS_VERSION%.repo
@@ -8,6 +9,7 @@ modules:
       - scenefx
 
   - type: rpm-ostree
+
     install:
       # greeters from main repos. spins that also include cosmic will include their config for greetd which doesn't conflict with these.
       # /etc/greetd/config.toml needs configuration to use tuigreet or gtkgreet, but will work with agreety (basic terminal login) out of the box.
@@ -113,7 +115,7 @@ modules:
     install:
       - SwayNotificationCenter
 
- - type: rpm-ostree
+  - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/alebastr/sway-extras/repo/fedora-%OS_VERSION%/alebastr-sway-extras-fedora-%OS_VERSION%.repo
     install:
