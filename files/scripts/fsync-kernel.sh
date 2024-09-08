@@ -7,12 +7,8 @@ set -oue pipefail
 
 echo 'T2-Atomic: Fsync Kernel Pre-Install: Installing Fsync Kernel...'
 
-rpm-ostree cliwrap install-to-root / && \
-    rpm-ostree override replace --experimental \
-    --from repo=copr:copr.fedorainfracloud.org:sentry:kernel-fsync \
-    kernel kernel-core \
-    kernel-modules kernel-modules-core kernel-modules-extra
-  
+rpm-ostree cliwrap install-to-root / && rpm-ostree override replace --experimental --freeze \
+    --from repo='copr:copr.fedorainfracloud.org:sentry:kernel-fsync' kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
 
 echo 'T2-Atomic: Fsync Kernel Post-Install: on bare betal, kernel arguments for thunderbolt, iommu, and S2idle will be applied by a startup script.'
 #these commands need to be run on the bare metal so put them in a script that runs at startup
