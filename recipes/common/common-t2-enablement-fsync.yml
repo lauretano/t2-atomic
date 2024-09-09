@@ -1,6 +1,7 @@
 modules:
   - type: containerfile
     snippets:
+      - COPY --from=ghcr.io/ublue-os/akmods:fsync-40  /rpms /tmp/akmods-rpms
       - COPY --from=ghcr.io/ublue-os/fsync-kernel:40 /tmp/rpms/ /tmp/kernel-rpms
 
   - type: rpm-ostree
