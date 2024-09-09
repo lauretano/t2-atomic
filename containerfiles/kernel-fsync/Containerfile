@@ -1,5 +1,4 @@
-ARG FSYNC="ghcr.io/ublue-os/fsync-kernel:40"
-FROM ${FSYNC} AS kernel_cache
+FROM ghcr.io/ublue-os/fsync-kernel:40 AS kernel_cache
 
 RUN --mount=type=cache,dst=/var/cache/rpm-ostree \
    --mount=type=bind,from=kernel_cache,source=/tmp/rpms,target=/tmp/kernel-rpms \
