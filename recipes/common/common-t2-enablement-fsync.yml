@@ -2,8 +2,6 @@ modules:
   - type: containerfile
     containerfiles:
       - kernel-fsync
-
-modules:
   - type: rpm-ostree
     repos:
       # thanks @SharpenedBlade for having these builds set up <3
