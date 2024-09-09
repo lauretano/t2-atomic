@@ -1,10 +1,5 @@
-
-#grab fsync cached built image from ublue since we use their base image
-
 ARG FSYNC="ghcr.io/ublue-os/fsync-kernel:40"
 FROM ${FSYNC} AS kernel_cache
-
-#COPY / /
 
 RUN --mount=type=cache,dst=/var/cache/rpm-ostree \
    --mount=type=bind,from=kernel_cache,source=/tmp/rpms,target=/tmp/kernel-rpms \
