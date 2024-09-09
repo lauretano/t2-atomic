@@ -1,7 +1,7 @@
 modules:
-  - type: containerfile
-    containerfiles:
-      - kernel-fsync
+  #- type: containerfile
+  #  containerfiles:
+  #    - kernel-fsync
   - type: rpm-ostree
     repos:
       # thanks @SharpenedBlade for having these builds set up <3
@@ -9,12 +9,17 @@ modules:
  
   - type: script
     scripts:
+      - kernel-fsync.sh
       # pull Wifi/BT firmware sources from arch-t2 mirror
       # using asahi-installer fork to package for use in fedora
       # it's hacky <3
       - apple-bcm-firmware.sh
+  
 
   - type: rpm-ostree
+    repos:
+      # thanks @SharpenedBlade for having these builds set up <3
+      - https://copr.fedorainfracloud.org/coprs/sharpenedblade/t2linux/repo/fedora-%OS_VERSION%/sharpenedblade-t2linux-fedora-%OS_VERSION%.repo
     install:
       # control the T2 active cooling
       - t2fanrd
