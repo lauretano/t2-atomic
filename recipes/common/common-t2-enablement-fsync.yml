@@ -1,7 +1,8 @@
 modules:
-  #- type: containerfile
-  #  containerfiles:
-  #    - kernel-fsync
+  - type: containerfile
+    snippets:
+      - COPY --from=ghcr.io/ublue-os/fsync-kernel:40 /tmp/rpms/ /tmp/kernel-rpms
+
   - type: rpm-ostree
     repos:
       # thanks @SharpenedBlade for having these builds set up <3
@@ -10,6 +11,7 @@ modules:
   - type: script
     scripts:
       - kernel-fsync.sh
+      #- kernel-fsync-copr.sh
       # pull Wifi/BT firmware sources from arch-t2 mirror
       # using asahi-installer fork to package for use in fedora
       # it's hacky <3
