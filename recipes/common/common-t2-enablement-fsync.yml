@@ -1,4 +1,9 @@
 modules:
+  - type: containerfile
+    containerfiles:
+      - kernel-fsync
+
+modules:
   - type: rpm-ostree
     repos:
       # thanks @SharpenedBlade for having these builds set up <3
@@ -10,9 +15,6 @@ modules:
       # using asahi-installer fork to package for use in fedora
       # it's hacky <3
       - apple-bcm-firmware.sh
-
-      # install Fsync kernel from @sentry's copr
-      - fsync-kernel.sh
 
   - type: rpm-ostree
     install:

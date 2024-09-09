@@ -1,0 +1,12 @@
+
+#grab fsync cached built image from ublue since we use their base image
+
+ARG KERNEL_CACHE="ghcr.io/ublue-os/fsync-kernel:40"
+FROM ${KERNEL_CACHE} AS kernel_cache
+
+COPY / /
+
+RUN --mount=type=cache,dst=/var/cache/rpm-ostree \
+   --mount=type=bind,from=kernel_cache,source=/tmp/rpms,target=/tmp/kernel-rpms \
+    rpm-ostree cliwrap install-to-root
+
