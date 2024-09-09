@@ -4,11 +4,6 @@ modules:
       - COPY --from=ghcr.io/ublue-os/akmods:fsync-40  /rpms /tmp/akmods-rpms
       - COPY --from=ghcr.io/ublue-os/fsync-kernel:40 /tmp/rpms/ /tmp/kernel-rpms
 
-  - type: rpm-ostree
-    repos:
-      # thanks @SharpenedBlade for having these builds set up <3
-      - https://copr.fedorainfracloud.org/coprs/sharpenedblade/t2linux/repo/fedora-%OS_VERSION%/sharpenedblade-t2linux-fedora-%OS_VERSION%.repo
- 
   - type: script
     scripts:
       - kernel-fsync.sh
