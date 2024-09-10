@@ -1,0 +1,109 @@
+modules:
+  - type: rpm-ostree
+    install:
+      # greeters from main repos. spins that also include cosmic will include their config for greetd which doesn't conflict with these.
+      # /etc/greetd/config.toml needs configuration to use tuigreet or gtkgreet, but will work with agreety (basic terminal login) out of the box.
+      - greetd-selinux
+      - tuigreet
+      - gtkgreet
+
+      #sddm we don't use it but one could with a systemctl enable sddm
+
+      - sddm
+      - sddm-themes
+      - qt5-qtgraphicaleffects
+      - qt5-qtquickcontrols2
+      - qt5-qtsvg
+
+    # launcher
+      - rofi-wayland
+      - rofimoji
+      - wmenu
+
+    # environment
+      - power-profiles-daemon
+      - xorg-x11-server-Xwayland
+      - polkit
+      - xfce-polkit 
+      - xdg-user-dirs
+      - dbus-tools
+      - dbus-daemon
+      - wl-clipboard
+      - pavucontrol
+      - playerctl
+      - qt5-qtwayland
+      - qt6-qtwayland
+      - vulkan-validation-layers
+      - vulkan-tools
+      - google-noto-emoji-fonts
+      - gnome-disk-utility
+      - ddcutil
+
+      # sound
+      - wireplumber
+      - pipewire
+      - pamixer
+      - pulseaudio-utils
+      - helvum
+
+    # networking
+      - network-manager-applet
+      - NetworkManager-openvpn
+      - NetworkManager-openconnect
+      - bluez
+      - bluez-tools
+      - blueman
+
+    # file manager
+      - thunar
+      - thunar-archive-plugin 
+      - thunar-volman
+      - mc
+      - xarchiver
+      - imv
+      - p7zip
+      - unrar
+      - gvfs-mtp
+      - gvfs-gphoto2
+      - gvfs-smb
+      - gvfs-nfs
+      - gvfs-fuse
+      - gvfs-archive
+      - android-tools
+
+    # screenshot
+      - slurp
+      - grim
+
+    # display
+      - wlr-randr
+      - wlsunset
+      - brightnessctl
+      - swaylock
+      - swayidle
+      - kanshi
+      - chayang
+
+    # status bar
+      - waybar
+
+    # terminal
+      - alacritty
+      - foot
+      - kitty
+
+    # notifications
+      - dunst
+
+    # theme and GUI
+      - adwaita-qt5
+      - fontawesome-fonts-all
+      - gnome-themes-extra
+      - gnome-icon-theme
+      - paper-icon-theme
+      - breeze-icon-theme 
+      - papirus-icon-theme
+
+  - type: script
+    snippets: 
+      - "ln -sfn /usr/lib/systemd/system/greetd.service /etc/systemd/system/display-manager.service"
