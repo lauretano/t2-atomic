@@ -16,6 +16,7 @@ modules:
       - qt5-qtsvg
 
     # launcher
+      - fuzzel
       - rofi-wayland
       - wmenu
 
