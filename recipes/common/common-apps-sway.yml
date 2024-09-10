@@ -6,6 +6,7 @@ modules:
       - sway-systemd
       - sway
       - sway-wallpapers
+      - rofimoji
 
   - type: rpm-ostree
     repos:

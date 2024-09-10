@@ -17,7 +17,6 @@ modules:
 
     # launcher
       - rofi-wayland
-      - rofimoji
       - wmenu
 
     # environment

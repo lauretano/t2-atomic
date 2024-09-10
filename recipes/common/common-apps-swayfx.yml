@@ -6,7 +6,9 @@ modules:
     install:
       - swayfx
       - scenefx
-
+  - type: rpm-ostree
+    install:
+      - rofimoji
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%OS_VERSION%/erikreider-SwayNotificationCenter-fedora-%OS_VERSION%.repo
