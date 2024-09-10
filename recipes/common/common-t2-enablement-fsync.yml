@@ -26,6 +26,17 @@ modules:
       - rust-tiny-dfr
 
       # support sound (to some extent, depending on model). 
-      # Eventually a YAFTI-style onboarding experience will detect macbook pro model
-      # and suggest appropriate EQ profile (such as for MacBookPro 16,1-2)
       - t2linux-audio
+
+      # install dependencies for software audio tuning needed for 
+      #  MacBookPro 16,1-2 and others 
+
+      - calf
+
+      - libspatialaudio
+      - lsp-plugins-lv2
+      - lv2-calf-plugins
+      - ladspa-swh-plugins
+      - bankstown-lv2
+      # these don't appear to be needed at least for the mbp16,1 profile
+      
