@@ -16,10 +16,10 @@ modules:
       - libspatialaudio
       - lsp-plugins-lv2
       - lv2-calf-plugins
-      - ladspa-swh-plugins
-      - bankstown-lv2
-      # these are being used by asahi-audio and we'd like to implement them for T2
+      - ladspa-swh-plugins #yes this is an old package we should be able to fix soon
       - pipewire-module-filter-chain-lv2
+      # the following are being used by asahi-audio and we'd like to implement them for T2
+      - bankstown-lv2
       - speakersafetyd
       
   - type: script
