@@ -1,42 +1,12 @@
+# copy the ublue-produced fsync and akmods containers. we're not installing
+#  any akmods right now but using fsync we can 
 modules:
   - type: containerfile
     snippets:
       - COPY --from=ghcr.io/ublue-os/akmods:fsync-40  /rpms /tmp/akmods-rpms
       - COPY --from=ghcr.io/ublue-os/fsync-kernel:40 /tmp/rpms/ /tmp/kernel-rpms
 
+# install the kernel rpms from that container
   - type: script
     scripts:
       - kernel-fsync.sh
-      #- kernel-fsync-copr.sh
-      # pull Wifi/BT firmware sources from arch-t2 mirror
-      # using asahi-installer fork to package for use in fedora
-      # it's hacky <3
-      - apple-bcm-firmware.sh
-  
-
-  - type: rpm-ostree
-    repos:
-      # thanks @SharpenedBlade for having these builds set up <3
-      - https://copr.fedorainfracloud.org/coprs/sharpenedblade/t2linux/repo/fedora-%OS_VERSION%/sharpenedblade-t2linux-fedora-%OS_VERSION%.repo
-    install:
-      # control the T2 active cooling
-      - t2fanrd
-
-      # run the touchbar (as of 20240620 I hear Debian has a new apple-touchbar app that works well)
-      - rust-tiny-dfr
-
-      # support sound (to some extent, depending on model). 
-      - t2linux-audio
-
-      # install dependencies for software audio tuning needed for 
-      #  MacBookPro 16,1-2 and others 
-
-      - calf
-
-      - libspatialaudio
-      - lsp-plugins-lv2
-      - lv2-calf-plugins
-      - ladspa-swh-plugins
-      - bankstown-lv2
-      # these don't appear to be needed at least for the mbp16,1 profile
-      
