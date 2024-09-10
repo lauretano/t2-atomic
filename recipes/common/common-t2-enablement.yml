@@ -18,6 +18,9 @@ modules:
       - lv2-calf-plugins
       - ladspa-swh-plugins
       - bankstown-lv2
+      # these are being used by asahi-audio and we'd like to implement them for T2
+      - pipewire-module-filter-chain-lv2
+      - speakersafetyd
       
   - type: script
     scripts:
