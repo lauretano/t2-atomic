@@ -3,16 +3,7 @@ modules:
   - type: rpm-ostree
     install:
       - fish
-      - s-tui
-      - stress-ng
-      - cockpit-ostree
-      - powertop
-      - lm_sensors
-      - cascadia-fonts-all
       - tailscale
-      - mc
-      - mozilla-fira-sans-fonts
-      - mozilla-fira-mono-fonts
       - gnome-pomodoro
       - python3-pydbus
       - neovim

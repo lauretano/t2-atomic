@@ -58,7 +58,6 @@ modules:
       - thunar
       - thunar-archive-plugin 
       - thunar-volman
-      - mc
       - xarchiver
       - imv
       - p7zip

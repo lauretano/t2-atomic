@@ -2,4 +2,16 @@
 modules:
   - type: rpm-ostree
     install:
+
       - fastfetch
+      - s-tui
+      - mc
+      - powertop
+      - cockpit-ostree
+
+      # fonts on linux haven't always been good
+      #   give people some great ones
+
+      - cascadia-fonts-all
+      - mozilla-fira-sans-fonts
+      - mozilla-fira-mono-fonts
