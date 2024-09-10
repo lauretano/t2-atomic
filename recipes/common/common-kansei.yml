@@ -16,6 +16,7 @@ modules:
       - gnome-pomodoro
       - python3-pydbus
       - neovim
+      - lsd
       
       # bits for fedora QA
       - gcc
