@@ -1,0 +1,6 @@
+type: files
+files:
+  - source: system/river/etc
+    destination: /etc
+  - source: system/river/usr
+    destination: /usr

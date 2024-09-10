@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=River
+Comment= a dynamic tiling Wayland compositor with flexible runtime config
+DesktopNames=river
+Exec=/usr/bin/startriver
+Type=Application
