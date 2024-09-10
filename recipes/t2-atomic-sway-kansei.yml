@@ -21,6 +21,7 @@ modules:
   - from-file: common/common-apps-cosmic.yml
   - from-file: common/common-apps-gnome.yml
   - from-file: common/common-apps.yml
+  - from-file: common/common-apps-wayland.yml
   - from-file: common/common-kansei.yml
 
   - type: rpm-ostree
