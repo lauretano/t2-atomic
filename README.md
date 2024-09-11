@@ -1,14 +1,19 @@
 # T2 Atomic &nbsp; [![bluebuild](https://github.com/lauretano/t2-atomic/actions/workflows/build.yml/badge.svg)](https://github.com/lauretano/t2-atomic/actions/workflows/build.yml)
-Fedora Atomic Desktops for Intel Macs with T2 chips
+Fedora Atomic Desktops for Macs with T2 chips
 -------------------------------
 > tl;dr?: It mostly works, skip to [installation instructions](#installation)
 
 The T2 chip, introduced in the final generation of Intel Macs, requires linux kernel patches, community-developed utilities, daemons, kernel arguments, config files, and binary firmware for use of things like the keyboard, trackpad, touchbar, webcam, and sound. The [T2Linux](https://wiki.t2linux.org/) community has built a lot of tooling and repositories to support installing distros on T2 Macs, including Fedora Workstation. T2-Atomic is built off these efforts, brought into the immutable world.
 
->Editor's Note: Please don't buy a MacBook to use Linux on it, this project is for those of us tired of macOS, with hand-me-downs, etc. Buy a [Framework](https://frame.work), something from [System76](https://system76.com/), or for heaven's sake at least a used ThinkPad. But, if you must...
+### Why Immutable?
+While you can install quite a few distros with the wonderful documentation on the [T2Linux](https://wiki.t2linux.org/) wiki and various community repackagers, none were immutable Linux. Devices with very specific hardware support have shown great promise using immutable Linux (aka the Steamdeck), with CI/CD and automated testing verifying images have compatible packages and all the required drivers operational before they're made available for download. With T2 Atomic, you'll gain better hardware support as the project develops, despite the age of this hardware.
+
 
 ## Current State (10 September 2024)
-> Warning: a 2023 Apple firmware update broke deep sleep and this is still broken.
+
+>Editor's Note: Please don't buy a MacBook to use Linux on it, this project is for those of us tired of macOS, with hand-me-downs, etc. Buy a [Framework](https://frame.work), something from [System76](https://system76.com/), or for heaven's sake at least a used ThinkPad. But, if you must...
+
+> Warning: a 2023 Apple firmware update broke deep sleep and this is still broken. See note above.
 - Current images and tags published (** denoting test images or advanced images that require some configuration): 
     - Gnome (Silverblue)
     - Plasma (Kinoite)
@@ -100,13 +105,29 @@ The following steps are to be done in the terminal app used by your desktop.
 In a terminal, run: ```rpm-ostree kargs --append-if-missing="intel_iommu=on" --append-if-missing="iommu=pt" --append-if-missing="mem_sleep_default=s2idle"```
 #### Enable keyboard for encryption unlock on boot
 In a terminal, run: ```rpm-ostree initramfs enable``` and reboot when prompted to. /etc/dracut.conf.d/t2-bce.conf defines the modules it will build in to load at boot, including apple-bce for the keyboard.
-<!--#### Hybrid Graphics / iGPU
+#### Hybrid Graphics / iGPU
+In Linux, you can enable the iGPU and the dGPU will operate in a low power state by default, allowing you to specify or limit which apps are allowed dGPU access to save power/heat/battery. By default, the iGPU is disabled and the dGPU operates in the same automatic state. See [Hybrid Graphics(T2Linux Wiki)](https://wiki.t2linux.org/guides/hybrid-graphics/) for more information.
 
-* content to come
-
+To enable the Intel integrated graphics, edit the file ```/etc/modprobe.d/apple-gmux.conf``` (creating it if not present). We provide the file with the option commented out. Uncomment, save and reboot to continue. An exmaple of the file enabling the iGPU is as follows:
+```
+# /etc/modprobe.d/apple-gmux.conf
+#
+# Enable the iGPU by setting force_igd=y
+# Disable it by commenting out the line or setting force_igd=n
+options apple-gmux force_igd=y
+```
 #### Disabling T2-integated Ethernet (connect/disconnect notifications)
 
-* content to come-->
+Edit or create /etc/modprobe.d/t2-eth-blocklist.conf
+
+```
+# T2 Atomic
+# disable the T2 chip internal USB ethernet, as the downstream devices
+# aren't yet supported (Touch ID, etc)
+blacklist cdc_ncm
+blacklist cdc_mbim
+```
+Save and restart
 
 ## Major Updates
 - 10 September 2024, all images have been moved to fsync kernel (which includes T2 patches). Bluefin-DX, River, and SwayFX images are now available.
