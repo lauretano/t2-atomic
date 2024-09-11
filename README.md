@@ -13,7 +13,7 @@ The T2 chip, introduced in the final generation of Intel Macs, requires linux ke
     - Gnome (Silverblue)
     - Plasma (Kinoite)
     - Sway (Sericea)
-    - Cosmic Alpha** - based on a Silverblue, includes Gnome and Gnome apps
+    - Cosmic Alpha** - based on Silverblue, includes Gnome and Gnome apps
     - Bluefin DX - Universal Blue's Bluefin DX developer experience, for T2
     - River** - Isaac Freund's [River](https://isaacfreund.com/software/river/) dynamic tiling Wayland compositor with flexible runtime configuration, on Universal Blue "base" image
     - Swayfx** - effectively Sericea modified to use Swayfx instead of Sway.
