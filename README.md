@@ -1,17 +1,23 @@
 # T2 Atomic &nbsp; [![bluebuild](https://github.com/lauretano/t2-atomic/actions/workflows/build.yml/badge.svg)](https://github.com/lauretano/t2-atomic/actions/workflows/build.yml)
 Fedora Atomic Desktops for Macs with T2 chips
 -------------------------------
+
+Gnome - Plasma - Sway - Bluefin - Cosmic - SwayFX - River
+
+
+**New!** a Bluefin-DX image is now available, with River and SwayFX images in testing. 
 > tl;dr?: It mostly works, skip to [installation instructions](#installation)
 
-The T2 chip, introduced in the final generation of Intel Macs, requires linux kernel patches, community-developed utilities, daemons, kernel arguments, config files, and binary firmware for use of things like the keyboard, trackpad, touchbar, webcam, and sound. The [T2Linux](https://wiki.t2linux.org/) community has built a lot of tooling and repositories to support installing distros on T2 Macs, including Fedora Workstation. T2-Atomic is built off these efforts, brought into the immutable world.
+The final generation of Intel Macs, with T2 chip, requires kernel patches and arguments, packages, configs, and firmware to be usable on Linux. [T2Linux](https://wiki.t2linux.org/) has built a lot of documentation,tooling, and specialty repositories to support installing distros on T2 Macs, including Fedora Workstation. T2-Atomic is built off these efforts, brought into the atomic/immutable world.
 
-### Why Immutable?
-While you can install quite a few distros with the wonderful documentation on the [T2Linux](https://wiki.t2linux.org/) wiki and various community repackagers, none were immutable Linux. Devices with very specific hardware support have shown great promise using immutable Linux (aka the Steamdeck), with CI/CD and automated testing verifying images have compatible packages and all the required drivers operational before they're made available for download. With T2 Atomic, you'll gain better hardware support as the project develops, despite the age of this hardware.
+### Why Atomic?
+Your T2 Mac has specialized needs. Instead of worrying if the latest version of some small but critical utility will break your keyboard on reboot, let our build and test pipeline help. Relax and let the daily updates stage in the background.
 
+Something still go wrong? Boot to the previous image and run ```rpm-ostree rollback```
 
 ## Current State (10 September 2024)
 
->Editor's Note: Please don't buy a MacBook to use Linux on it, this project is for those of us tired of macOS, with hand-me-downs, etc. Buy a [Framework](https://frame.work), something from [System76](https://system76.com/), or for heaven's sake at least a used ThinkPad. But, if you must...
+>Editor's Note: Please don't buy a MacBook to use Linux on it, this project is for those of us tired of macOS, with hand-me-downs, etc. Buy a [Framework](https://frame.work), something from [System76](https://system76.com/), or for the love of compute at least a used ThinkPad. But, if you must...
 
 > Warning: a 2023 Apple firmware update broke deep sleep and this is still broken. See note above.
 - Current images and tags published (** denoting test images or advanced images that require some configuration): 
