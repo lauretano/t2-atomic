@@ -3,7 +3,7 @@ Fedora Atomic Desktops for Intel Macs with T2 chips
 -------------------------------
 > tl;dr?: It mostly works, skip to [installation instructions](#installation)
 
-The T2 chip, introduced in the final generation of Intel Macs, requires linux kernel patches, community-developed utilities, daemons, kernel arguments, config files, and binary firmware for use of things like the keyboard, trackpad, touchbar, webcam, and sound. The [T2Linux](https://wiki.t2linux.org/) community has built a lot of tooling and repositories to support installing distros on T2 Macs, including Fedora Workstation. T2-Atomic is built off these efforts, brought into the Fedora Atomic Desktops (aka the immutables, silverblue, sericea, kinoite, etc) world.
+The T2 chip, introduced in the final generation of Intel Macs, requires linux kernel patches, community-developed utilities, daemons, kernel arguments, config files, and binary firmware for use of things like the keyboard, trackpad, touchbar, webcam, and sound. The [T2Linux](https://wiki.t2linux.org/) community has built a lot of tooling and repositories to support installing distros on T2 Macs, including Fedora Workstation. T2-Atomic is built off these efforts, brought into the immutable world.
 
 >Editor's Note: Please don't buy a MacBook to use Linux on it, this project is for those of us tired of macOS, with hand-me-downs, etc. Buy a [Framework](https://frame.work), something from [System76](https://system76.com/), or for heaven's sake at least a used ThinkPad. But, if you must...
 
@@ -108,7 +108,8 @@ In a terminal, run: ```rpm-ostree initramfs enable``` and reboot when prompted t
 
 * content to come-->
 
-## Previous Updates
+## Major Updates
+- 10 September 2024, all images have been moved to fsync kernel (which includes T2 patches). Bluefin-DX, River, and SwayFX images are now available.
 - 18 June 2024, We're now publishing Plasma images to celebrate Plasma 6.1 releasing with explicit sync support. The fix for LUKS unlock is working in testing and should be available in builds soon.
 - 10 May 2024, a COSMIC variant is in testing, not for public consumption at this time. It won't work with the below instructions as SELinux has to be disabled for it to work for now. You wouldn't want to install anyway, more of a personal spin for my own internal testing.
 - as of 6 May 2024, we're rapidly approaching our first Beta release. Wifi and BT should now be mostly operational including WPA3
