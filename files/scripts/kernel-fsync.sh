@@ -5,6 +5,9 @@
 # builds actually ran successfully without any errors!
 set -oue pipefail
 
+
+# install the kernel RPMs that have been copied to /tmp from the ublue
+#  kernel-cache containerfile
 rpm-ostree cliwrap install-to-root / && \
 
 rpm-ostree override replace --experimental \
