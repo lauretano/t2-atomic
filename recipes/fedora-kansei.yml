@@ -7,7 +7,7 @@ name: fedora-kansei
 # description will be included in the image's metadata
 description: TEST NON-T2 DO NOT INSTALL Personal Sway spin testing area, swayfx or similar
 
-base-image: ghcr.io/ublue-os/bluefin-dx
+base-image: ghcr.io/ublue-os/sericea:latest
 image-version: latest
 
 modules:
