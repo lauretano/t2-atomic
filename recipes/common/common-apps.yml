@@ -9,6 +9,8 @@ modules:
       - powertop
       - lm_sensors
       - cockpit-ostree
+      - sysprof
+      - sysprof-cli
 
       # fonts on linux haven't always been good
       #   give people some great ones
