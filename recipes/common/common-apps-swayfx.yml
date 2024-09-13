@@ -5,7 +5,6 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-%OS_VERSION%/swayfx-swayfx-fedora-%OS_VERSION%.repo
     install:
       - swayfx
-      - scenefx
   - type: rpm-ostree
     install:
       - rofimoji
@@ -23,7 +22,12 @@ modules:
       - poweralertd
       - pinentry-rofi
       - swww
-      
+  
+  - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-%OS_VERSION%/swayfx-swayfx-fedora-%OS_VERSION%.repo
+    install:
+      - scenefx
   - type: script
     snippets: 
       - "sed -i '/^UseIn/ s/$/,sway/' /usr/share/xdg-desktop-portal/portals/gnome-keyring.portal"
