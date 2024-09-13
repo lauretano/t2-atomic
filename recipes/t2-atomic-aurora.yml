@@ -2,11 +2,11 @@
 # 2024 Chris Lauretano <os@cdl.sh>
 # this is an experiment to get bluefin-dx properly operational on T2 macs
 # now that bluefin uses fsync kernel that has basic T2 patches
-name: t2-atomic-bluefin-dx
+name: t2-atomic-aurora
 # description will be included in the image's metadata
-description: Bluefin DX Repackaged for Apple T2 Hardware.
+description: Aurora Repackaged for Apple T2 Hardware.
 
-base-image: ghcr.io/ublue-os/bluefin-dx
+base-image: ghcr.io/ublue-os/aurora
 image-version: latest
 
 modules:
