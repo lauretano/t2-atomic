@@ -1,4 +1,4 @@
-name: T2 UBlue Flagship Image Build
+name: T2 Bluefin Image Build
 on:
   schedule:
     - cron: "00 4 * * *" # build after 02:00 US/Eastern every day

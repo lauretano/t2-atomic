@@ -1,4 +1,5 @@
-# T2 Atomic &nbsp; [![bluebuild](https://github.com/lauretano/t2-atomic/actions/workflows/build.yml/badge.svg)](https://github.com/lauretano/t2-atomic/actions/workflows/build.yml)
+# T2 Atomic &nbsp; [![bluebuild](https://github.com/lauretano/t2-atomic/actions/workflows/build.yml/badge.svg)](https://github.com/lauretano/t2-atomic/actions/workflows/build.yml) - [![bluebuild](https://github.com/lauretano/t2-atomic/actions/workflows/build-ublue.yml/badge.svg)](https://github.com/lauretano/t2-atomic/actions/workflows/build-ublue.yml) - [![bluebuild](https://github.com/lauretano/t2-atomic/actions/workflows/build-test.yml/badge.svg)](https://github.com/lauretano/t2-atomic/actions/workflows/build-test.yml)
+
 Fedora Atomic Desktops for Macs with T2 chips
 -------------------------------
 
