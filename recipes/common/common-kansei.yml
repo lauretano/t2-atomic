@@ -8,9 +8,6 @@ modules:
       - python3-pydbus
       - neovim
       - lsd
-      - plasma-discover-flatpak
-      - plasma-discover-rpm-ostree
-      - plasma-discover
       
       # bits for fedora QA
       - gcc
