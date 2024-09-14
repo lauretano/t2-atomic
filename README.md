@@ -3,7 +3,7 @@
 Fedora Atomic Desktops for Macs with T2 chips
 -------------------------------
 
-Gnome - Plasma - Sway - Bluefin - Cosmic - SwayFX - River
+Gnome - Plasma - Sway - Bluefin/Aurora/DX - Cosmic - SwayFX - River
 
 
 **New!** a Bluefin, Aurora (and DX variant) images are now available, with River and SwayFX images in testing. 
