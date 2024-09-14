@@ -5,8 +5,8 @@ Fedora Atomic Desktops for Macs with T2 chips
 Gnome - Plasma - Sway - Bluefin - Cosmic - SwayFX - River
 
 
-**New!** a Bluefin-DX image is now available, with River and SwayFX images in testing. 
-> tl;dr?: It mostly works, skip to [installation instructions](#installation)
+**New!** a Bluefin, Aurora (and DX variant) images are now available, with River and SwayFX images in testing. 
+> tl;dr?: Things mostly works, skip to [installation instructions](#installation)
 
 The final generation of Intel Macs, with T2 chip, requires kernel patches and arguments, packages, configs, and firmware to be usable on Linux. [T2Linux](https://wiki.t2linux.org/) has built a lot of documentation,tooling, and specialty repositories to support installing distros on T2 Macs, including Fedora Workstation. T2-Atomic is built off these efforts, brought into the atomic/immutable world.
 
@@ -25,7 +25,8 @@ Something still go wrong? Boot to the previous image and run ```rpm-ostree rollb
     - Plasma (Kinoite)
     - Sway (Sericea)
     - Cosmic Alpha** - based on Silverblue, includes Gnome and Gnome apps
-    - Bluefin DX - Universal Blue's Bluefin DX developer experience, for T2
+    - Bluefin and Aurora - Universal Blue's Bluefin and Aurora images, for T2
+    - Bluefin-DX and Aurora-DX - Univeral Blue's Bluefin Developer Experience, for T2
     - River** - Isaac Freund's [River](https://isaacfreund.com/software/river/) dynamic tiling Wayland compositor with flexible runtime configuration, on Universal Blue "base" image
     - Swayfx** - effectively Sericea modified to use Swayfx instead of Sway.
     - Tags: latest (we may add a "stable" with fsync-ba kernel like Bluefin has available)
