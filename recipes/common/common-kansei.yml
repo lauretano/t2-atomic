@@ -9,7 +9,7 @@ modules:
       - neovim
       - lsd
       - plasma-discover-flatpak
-      - plasma-discover-rpmostree
+      - plasma-discover-rpm-ostree
       - plasma-discover
       
       # bits for fedora QA
