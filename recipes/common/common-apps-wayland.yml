@@ -38,6 +38,8 @@ modules:
       - google-noto-emoji-fonts
       - gnome-disk-utility
       - ddcutil
+      - qalculate
+      - qalculate-gtk
 
       # sound
       - wireplumber
