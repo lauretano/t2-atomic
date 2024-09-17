@@ -8,7 +8,9 @@ modules:
       - python3-pydbus
       - neovim
       - lsd
-      
+      - qalculate
+      - qalculate-gtk
+
       # bits for fedora QA
       - gcc
       - python3-openidc-client
@@ -36,7 +38,11 @@ modules:
         - org.raspberrypi.rpi-imager
         - re.sonny.Junction
         - io.gitlab.librewolf-community
-        
+        - org.gnome.Snapshot
+        - org.gnome.Weather
+        - com.github.rafostar.Clapper
+        - org.gnome.font-viewer
+        - dev.serebit.Waycheck
 
   - type: rpm-ostree
     repos:
