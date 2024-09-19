@@ -40,6 +40,7 @@ modules:
       - ddcutil
       - qalculate
       - qalculate-gtk
+      - waycheck
 
       # sound
       - wireplumber
@@ -104,7 +105,3 @@ modules:
       - paper-icon-theme
       - breeze-icon-theme 
       - papirus-icon-theme
-
-  - type: script
-    snippets: 
-      - "ln -sfn /usr/lib/systemd/system/greetd.service /etc/systemd/system/display-manager.service"
