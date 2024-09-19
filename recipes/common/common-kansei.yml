@@ -12,11 +12,11 @@ modules:
       - qalculate-gtk
 
       # bits for fedora QA
-      - gcc
-      - python3-openidc-client
-      - make
-      - libtirpc-devel
-      - fedora-easy-karma
+      #- gcc
+      #- python3-openidc-client
+      #- make
+      #- libtirpc-devel
+      #- fedora-easy-karma
     
 
   - type: default-flatpaks
@@ -42,7 +42,6 @@ modules:
         - org.gnome.Weather
         - com.github.rafostar.Clapper
         - org.gnome.font-viewer
-        - dev.serebit.Waycheck
 
   - type: rpm-ostree
     repos:
