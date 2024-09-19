@@ -39,7 +39,6 @@ modules:
       - gnome-disk-utility
       - ddcutil
       - qalculate
-      - qalculate-gtk
       - waycheck
 
       # sound

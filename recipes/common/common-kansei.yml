@@ -9,7 +9,6 @@ modules:
       - neovim
       - lsd
       - qalculate
-      - qalculate-gtk
 
       # bits for fedora QA
       #- gcc
