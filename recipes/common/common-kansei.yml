@@ -9,6 +9,11 @@ modules:
       - lsd
       - qalculate
       - qalculate-gtk
+      #
+      - transmission-cli
+      - zathura
+      - zathura-fish-completion
+      - zathura-pdf-mupdf
 
       # bits for fedora QA
       - gcc
