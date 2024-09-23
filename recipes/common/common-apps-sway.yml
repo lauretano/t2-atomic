@@ -25,4 +25,4 @@ modules:
       
   - type: script
     snippets: 
-      - "sed -i '/^UseIn/ s/$/,sway/' /usr/share/xdg-desktop-portal/portals/gnome-keyring.portal"
+      - "sed -i '/^UseIn/ s/$/;sway/' /usr/share/xdg-desktop-portal/portals/gnome-keyring.portal"

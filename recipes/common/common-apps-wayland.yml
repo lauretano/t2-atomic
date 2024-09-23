@@ -3,6 +3,7 @@ modules:
     install:
       # greeters from main repos. spins that also include cosmic will include their config for greetd which doesn't conflict with these.
       # /etc/greetd/config.toml needs configuration to use tuigreet or gtkgreet, but will work with agreety (basic terminal login) out of the box.
+      - greetd
       - greetd-selinux
       - tuigreet
       - gtkgreet
@@ -40,6 +41,7 @@ modules:
       - ddcutil
       - qalculate
       - waycheck
+      - adw-gtk3-theme
 
       # sound
       - wireplumber
