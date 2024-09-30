@@ -56,3 +56,7 @@ modules:
   - type: bling
     install:
       - 1password
+
+  - type: brew
+      #nofile-limits: true # increase nofile limits
+    brew-analytics: true # disable telemetry
