@@ -13,7 +13,10 @@ modules:
       - transmission-cli
       - zathura
       - zathura-fish-completion
-      - zathura-pdf-mupdf
+      - zathura-pdf-mupdfqq
+      - tmux
+      - wayvnc
+      - powertop
 
       # bits for fedora QA
       - gcc
@@ -52,6 +55,14 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%OS_VERSION%/erikreider-SwayNotificationCenter-fedora-%OS_VERSION%.repo
     install:
       - SwayNotificationCenter
+
+  - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/shdwchn10/AllTheTools/repo/fedora-%OS_VERSION%/shdwchn10-AllTheTools-fedora-%OS_VERSION%.repo
+    install:
+      - topgrade
+      - chezmoi
+      - starship
 
   - type: bling
     install:
