@@ -13,7 +13,7 @@ modules:
       - transmission-cli
       - zathura
       - zathura-fish-completion
-      - zathura-pdf-mupdfqq
+      - zathura-pdf-mupdf
       - tmux
       - wayvnc
       - powertop
