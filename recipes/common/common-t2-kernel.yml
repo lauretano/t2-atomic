@@ -1,0 +1,11 @@
+modules:
+  - type: rpm-ostree
+    repos:
+      # thanks @SharpenedBlade for having these builds set up
+      - https://copr.fedorainfracloud.org/coprs/sharpenedblade/t2linux/repo/fedora-%OS_VERSION%/sharpenedblade-t2linux-fedora-%OS_VERSION%.repo
+ 
+
+# install the t2 kerel
+  - type: script
+    scripts:
+      - t2-kernel.sh
