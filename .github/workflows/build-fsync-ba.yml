@@ -1,0 +1,40 @@
+name: T2 fsync-ba Image Build
+on:
+  schedule:
+    - cron: "30 5 * * *" # build at 03:30 UTC every day 
+                          # (ublue main images build a bit after 03:00)
+  # push:
+  #   paths-ignore: # don't rebuild if only documentation has changed
+  #     - "**.md"
+      
+  #pull_request:
+  workflow_dispatch: # allow manually triggering builds
+jobs:
+  bluebuild:
+    name: Build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+    strategy:
+      fail-fast: true # stop GH from cancelling all matrix builds if one fails
+      matrix:
+        recipe:
+          #- t2-atomic-cosmic.yml
+          - t2-atomic-cosmic-gnome-fsync-ba.yml
+          #- t2-atomic-cosmic-plasma.yml
+          - t2-atomic-gnome-fsync-ba.yml
+          - t2-atomic-plasma-fsync-ba.yml
+          - t2-atomic-sway-fsync-ba.yml
+
+    steps:
+       # the build is fully handled by the reusable github action
+      - name: Image Build
+        uses: blue-build/github-action@v1.6
+        with:
+          recipe: ${{ matrix.recipe }}
+          alt-tags: fsync-ba
+          cosign_private_key: ${{ secrets.SIGNING_SECRET }}
+          registry_token: ${{ github.token }}
+          pr_event_number: ${{ github.event.number }}

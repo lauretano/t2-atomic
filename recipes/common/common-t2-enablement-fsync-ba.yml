@@ -1,0 +1,12 @@
+# copy the ublue-produced fsync and akmods containers. we're not installing
+#  any akmods right now but using fsync we can 
+modules:
+  - type: containerfile
+    snippets:
+      - COPY --from=ghcr.io/ublue-os/akmods:fsync-ba-40  /rpms /tmp/akmods-rpms
+      - COPY --from=ghcr.io/ublue-os/fsync-ba-kernel:40 /tmp/rpms/ /tmp/kernel-rpms
+
+# install the kernel rpms from that container
+  - type: script
+    scripts:
+      - kernel-fsync.sh
