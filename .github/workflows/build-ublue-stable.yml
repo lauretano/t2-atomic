@@ -1,4 +1,4 @@
-name: T2 Ublue Stabe Image Build
+name: T2 Ublue Stable Image Build
 on:
   schedule:
     - cron: "00 7 * * 2" # build weekly on tuesday
