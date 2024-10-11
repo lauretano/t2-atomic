@@ -11,7 +11,7 @@ image-version: latest
 
 modules:
   - from-file: common/common-t2-enablement.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
-  - from-file: common/common-t2-enablement-fsync.yml #pulls fsync containerfile and overrides base image kernel
+  - from-file: common/common-t2-kernel.yml #pulls fsync containerfile and overrides base image kernel
   #- from-file: common/common-apps-gnome.yml
   - from-file: common/common-apps-cosmic.yml
   - from-file: common/common-apps.yml #installs apps common across all the t2 editions
