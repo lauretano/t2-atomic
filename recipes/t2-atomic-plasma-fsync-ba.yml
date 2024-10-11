@@ -9,7 +9,8 @@ description: Fedora Atomic Plasma (aka Kinoite) spin for Apple T2 Hardware
 
 base-image: ghcr.io/ublue-os/kinoite-main
 image-version: 40
-alt-tags: fsync-ba
+alt-tags:
+  - fsync-ba
 modules:
   - from-file: common/common-t2-enablement.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
   - from-file: common/common-t2-enablement-fsync-ba.yml #pulls fsync containerfile and overrides base image kernel
