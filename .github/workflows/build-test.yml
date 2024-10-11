@@ -1,13 +1,13 @@
 name: T2 Test Image Build
 on:
-  schedule:
-    - cron: "30 4 * * *" # build at 03:30 UTC every day 
+  #schedule:
+  #  - cron: "30 4 * * *" # build at 03:30 UTC every day 
                           # (ublue main images build a bit after 03:00)
   #push:
   #   paths-ignore: # don't rebuild if only documentation has changed
   #     - "**.md"
       
-  pull_request:
+  #pull_request:
   workflow_dispatch: # allow manually triggering builds
 jobs:
   bluebuild:
