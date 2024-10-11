@@ -6,7 +6,6 @@ modules:
       - sway-systemd
       - sway
       - sway-wallpapers
-      - rofimoji
 
   - type: rpm-ostree
     repos:
@@ -20,7 +19,6 @@ modules:
     install:
       - swayimg
       - poweralertd
-      - pinentry-rofi
       - swww
       
   - type: script

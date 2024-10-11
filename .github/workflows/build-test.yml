@@ -22,7 +22,7 @@ jobs:
       matrix:
         recipe:
           - t2-atomic-river.yml
-          - t2-atomic-swayfx.yml
+          #- t2-atomic-swayfx.yml
 
     steps:
        # the build is fully handled by the reusable github action
