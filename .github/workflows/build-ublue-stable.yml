@@ -1,0 +1,37 @@
+name: T2 Ublue Stabe Image Build
+on:
+  schedule:
+    - cron: "00 7 * * 2" # build weekly on tuesday
+                          # (bluefin/aurora builds at around 05:45 UTC)
+  # push:
+  #   paths-ignore: # don't rebuild if only documentation has changed
+  #     - "**.md"
+      
+  # pull_request:
+  workflow_dispatch: # allow manually triggering builds
+jobs:
+  bluebuild:
+    name: Build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+    strategy:
+      fail-fast: false # stop GH from cancelling all matrix builds if one fails
+      matrix:
+        recipe:
+          - t2-atomic-bluefin-dx-stable.yml
+          - t2-atomic-aurora-dx-stable.yml
+          #- t2-atomic-bazzite.yml
+          #- t2-atomic-bazzite-gnome.yml
+
+    steps:
+       # the build is fully handled by the reusable github action
+      - name: Image Build
+        uses: blue-build/github-action@v1.6
+        with:
+          recipe: ${{ matrix.recipe }}
+          cosign_private_key: ${{ secrets.SIGNING_SECRET }}
+          registry_token: ${{ github.token }}
+          pr_event_number: ${{ github.event.number }}
