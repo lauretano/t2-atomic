@@ -26,6 +26,7 @@ jobs:
           #- t2-atomic-cosmic-plasma.yml
           - t2-atomic-gnome-fsync-ba.yml
           - t2-atomic-plasma-fsync-ba.yml
+          - t2-atomic-plasma-fsync.yml
           - t2-atomic-sway-fsync-ba.yml
 
     steps:
