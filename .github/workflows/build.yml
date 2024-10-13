@@ -1,4 +1,4 @@
-name: T2 Main Image Build
+name: T2 Main Build
 on:
   schedule:
     - cron: "30 4 * * *" # build at 03:30 UTC every day 

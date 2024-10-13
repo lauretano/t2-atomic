@@ -1,7 +1,7 @@
-name: T2 Ublue Stable Image Build
+name: T2 Ublue Stable Build
 on:
-  schedule:
-    - cron: "00 7 * * 2" # build weekly on tuesday
+  #schedule:
+  #  - cron: "00 7 * * 2" # build weekly on tuesday
                           # (bluefin/aurora builds at around 05:45 UTC)
   # push:
   #   paths-ignore: # don't rebuild if only documentation has changed
