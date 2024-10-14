@@ -22,8 +22,9 @@ modules:
       - wmenu
 
     # environment
-      - tuned
-      - tuned-ppd
+      #- tuned
+      #- tuned-ppd
+      - power-profiles-daemon
       - xorg-x11-server-Xwayland
       - polkit
       - xfce-polkit 
