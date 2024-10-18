@@ -7,7 +7,7 @@ name: t2-atomic-kansei
 # description will be included in the image's metadata
 description: Fedora Atomic Personal Spin
 base-image: ghcr.io/ublue-os/sericea-main
-image-version: latest
+image-version: 41
 
 modules:
   - from-file: common/common-t2-enablement.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware

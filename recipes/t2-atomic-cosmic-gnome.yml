@@ -8,7 +8,7 @@ name: t2-atomic-cosmic-gnome
 description: Fedora Atomic Cosmic (added to silverblue) spin for Apple T2 Hardware
 
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 40
+image-version: 41
 
 modules:
   - from-file: common/common-t2-enablement.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
