@@ -23,7 +23,7 @@ jobs:
         recipe:
           #- t2-atomic-cosmic.yml
           - t2-atomic-cosmic-gnome.yml
-          #- t2-atomic-cosmic-plasma.yml
+          - t2-atomic-cosmic-plasma.yml
           - t2-atomic-gnome.yml
           - t2-atomic-plasma.yml
           - t2-atomic-sway.yml
