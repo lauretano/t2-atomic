@@ -17,6 +17,7 @@ modules:
       - tmux
       - wayvnc
       - powertop
+      - frog-protocols
 
       # bits for fedora QA
       - gcc

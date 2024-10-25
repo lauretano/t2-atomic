@@ -16,6 +16,7 @@ modules:
       - cascadia-fonts-all
       - mozilla-fira-sans-fonts
       - mozilla-fira-mono-fonts
+      - jetbrains-mono-fonts-all
 
     remove:
       - firefox
