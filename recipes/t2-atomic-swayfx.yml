@@ -8,7 +8,7 @@ name: t2-atomic-swayfx
 description: TEST Personal Swayfx spin testing area, swayfx or similar
 
 base-image: ghcr.io/ublue-os/base-main
-image-version: 40
+image-version: 41
 
 modules:
   - from-file: common/common-t2-enablement.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware

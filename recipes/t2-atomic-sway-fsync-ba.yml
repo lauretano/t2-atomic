@@ -8,7 +8,7 @@ name: t2-atomic-sway
 description: Fedora Atomic Sway (sericea) spin for Apple T2 Hardware
 
 base-image: ghcr.io/ublue-os/sericea-main
-image-version: 40
+image-version: 41
 alt-tags:
   - fsync-ba
 modules:

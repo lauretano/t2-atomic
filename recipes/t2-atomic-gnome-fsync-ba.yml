@@ -8,7 +8,7 @@ name: t2-atomic-gnome
 description: Fedora Atomic Gnome (aka Silverblue) for Apple T2 Hardware. Largely unopinionated, so most Gnome apps are via flatpak.
 
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 40
+image-version: 41
 alt-tags: 
   - fsync-ba
 modules:
