@@ -44,6 +44,7 @@ modules:
       - qalculate
       - waycheck
       - adw-gtk3-theme
+      - wlogout
 
       # sound
       - wireplumber
