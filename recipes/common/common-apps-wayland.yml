@@ -22,9 +22,8 @@ modules:
       - wmenu
 
     # environment
-      #- tuned
-      #- tuned-ppd
-      - power-profiles-daemon
+      - tuned
+      - tuned-ppd
       - xorg-x11-server-Xwayland
       - polkit
       - xfce-polkit 
@@ -109,3 +108,4 @@ modules:
       - paper-icon-theme
       - breeze-icon-theme 
       - papirus-icon-theme
+      - yaru-theme
