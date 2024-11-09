@@ -31,4 +31,4 @@ modules:
 
   - type: script
     snippets: 
-      - "set -x; kver=$(cd /usr/lib/modules && echo *); dracut -vf /usr/lib/modules/$kver/initramfs.img $kver"
+      #- "set -x; kver=$(cd /usr/lib/modules && echo *); dracut -vf /usr/lib/modules/$kver/initramfs.img $kver"
