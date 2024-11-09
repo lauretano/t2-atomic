@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -oue pipefail
+
+
+hyprland_conf="$HOME/.config/hypr/hyprland.conf"
+base="/usr/share/hyprland/hyprland.conf"
+
+if [ -f "$hyprland_conf" ]; then
+    Hyprland -c "$hyprland_conf"
+else
+    Hyprland -c "$base"
+fi
