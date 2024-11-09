@@ -18,6 +18,7 @@ modules:
       - wayvnc
       - powertop
       - frog-protocols
+      - yaru-theme
 
       # bits for fedora QA
       - gcc
