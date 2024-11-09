@@ -28,3 +28,7 @@ modules:
       # using asahi-installer fork to package for use in fedora
       # it's hacky <3
       - apple-bcm-firmware.sh
+
+  - type: script
+    snippets: 
+      #- "set -x; kver=$(cd /usr/lib/modules && echo *); dracut -vf /usr/lib/modules/$kver/initramfs.img $kver"

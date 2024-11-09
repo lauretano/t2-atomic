@@ -5,7 +5,8 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/sharpenedblade/t2linux/repo/fedora-%OS_VERSION%/sharpenedblade-t2linux-fedora-%OS_VERSION%.repo
  
 
-# install the t2 kerel
+# install the t2 kernel 
   - type: script
     scripts:
       - t2-kernel.sh
+      #- t2-apple-bce.sh
