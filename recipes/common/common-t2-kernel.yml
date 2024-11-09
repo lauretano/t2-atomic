@@ -9,4 +9,4 @@ modules:
   - type: script
     scripts:
       - t2-kernel.sh
-      - t2-apple-bce.sh
+      #- t2-apple-bce.sh
