@@ -5,10 +5,12 @@ modules:
   #    # TEMP: this is hardcoded as rawhide as of 20240531 as f40 repo isn't yet available (brand new copr)
   #    - https://copr.fedorainfracloud.org/coprs/ryanabx/cosmic-epoch/repo/fedora-40/ryanabx-cosmic-epoch-fedora-%OS_VERSION%.repo
     install:
-      - cosmic-desktop
-
-
-  #- type: rpm-ostree
-  #  install:
-  #    - tuned
-  #    - gnome-keyring
+      - cosmic-session
+      - cosmic-app-library
+      - cosmic-files
+      - cosmic-icon-theme
+      - cosmic-edit
+      - cosmic-panel
+      - cosmic-settings
+      - cosmic-store
+      - cosmic-term
