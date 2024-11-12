@@ -3,6 +3,9 @@
 modules:
   - type: rpm-ostree
     install:
+      - plasma-desktop
+      - plasma-workspace
+      - plasma-workspace-wayland
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
     system:
