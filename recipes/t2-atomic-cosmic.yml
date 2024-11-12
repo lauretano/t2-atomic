@@ -16,8 +16,9 @@ modules:
   - from-file: common/common-t2-kernel.yml #pulls fsync containerfile and overrides base image kernel
   - from-file: common/common-apps.yml
 
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
-  
   - type: script
     snippets: 
       - "ln -sfn /usr/lib/systemd/system/cosmic-greeter.service /etc/systemd/system/display-manager.service"
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  

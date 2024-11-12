@@ -21,20 +21,8 @@ jobs:
       fail-fast: false # stop GH from cancelling all matrix builds if one fails
       matrix:
         recipe:
-          #- t2-atomic-cosmic.yml
-          #- t2-atomic-cosmic-gnome.yml
-          #- t2-atomic-cosmic-plasma.yml
           - t2-atomic-kansei.yml
-          #- t2-atomic-river.yml
-          #- t2-atomic-river.yml
-          #- t2-atomic-gnome.yml
-          #- t2-atomic-hyprland.yml
-          #- t2-atomic-lxqt.yml
-          #- t2-atomic-plasma.yml
-          #- t2-atomic-plasma-kansei.yml
-          #- t2-atomic-sway.yml
-          #- t2-atomic-sway-kansei.yml
-          #- fedora-kansei.yml
+          - fedora-kansei.yml
 
     steps:
        # the build is fully handled by the reusable github action
