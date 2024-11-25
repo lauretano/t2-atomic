@@ -9,14 +9,29 @@ modules:
       - lsd
       - qalculate
       - qalculate-gtk
+      - inxi
+      - jetbrains-mono-fonts-all
+      - obs-studio-devel
+      - obs-studio-libs 
+      - obs-studio-plugin-vaapi
+      - obs-studio-plugin-vkcapture
+      - obs-studio-plugin-vlc-video
+      - obs-studio-plugin-webkitgtk
+      - pipewire-v4l2 
+      - powertop
+      - tmux
+      - tuigreet 
+      - vim 
+      - vulkan-tools
+      - waycheck
+      - wayland-devel
+      - wf-recorder
       #
-      - transmission-cli
       - zathura
       - zathura-fish-completion
       - zathura-pdf-mupdf
       - tmux
       - wayvnc
-      - powertop
       - frog-protocols
       - yaru-theme
 

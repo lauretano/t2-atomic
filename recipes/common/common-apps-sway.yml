@@ -9,12 +9,6 @@ modules:
 
   - type: rpm-ostree
     repos:
-      - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%OS_VERSION%/erikreider-SwayNotificationCenter-fedora-%OS_VERSION%.repo
-    install:
-      - SwayNotificationCenter
-
-  - type: rpm-ostree
-    repos:
       - https://copr.fedorainfracloud.org/coprs/alebastr/sway-extras/repo/fedora-%OS_VERSION%/alebastr-sway-extras-fedora-%OS_VERSION%.repo
     install:
       - swayimg
