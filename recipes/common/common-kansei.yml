@@ -11,6 +11,7 @@ modules:
       - qalculate-gtk
       - inxi
       - jetbrains-mono-fonts-all
+      - ibm-plex-fonts-all
       - obs-studio-devel
       - obs-studio-libs 
       - obs-studio-plugin-vaapi
