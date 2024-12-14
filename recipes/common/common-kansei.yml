@@ -42,6 +42,11 @@ modules:
       - make
       - libtirpc-devel
       - fedora-easy-karma
+
+      #bits for hyprpm since it doesn't really work in distrobox
+      - cmake
+      - meson
+      - cpio
     
 
   - type: default-flatpaks
