@@ -45,6 +45,7 @@ modules:
 
       #bits for hyprpm since it doesn't really work in distrobox
       - cmake
+      - gcc-c++
       - meson
       - cpio
     
