@@ -49,6 +49,7 @@ modules:
       - meson
       - cpio
       - glfw
+      - glfw-devel
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
