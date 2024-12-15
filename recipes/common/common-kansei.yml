@@ -51,6 +51,7 @@ modules:
       - glfw
       - glfw-devel
       - hyprutils-devel
+      - aquamarine
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
