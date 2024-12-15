@@ -48,7 +48,7 @@ modules:
       - gcc-c++
       - meson
       - cpio
-      - mesa-libGL
+      - glfw
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
