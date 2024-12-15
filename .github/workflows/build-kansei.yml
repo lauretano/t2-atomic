@@ -22,7 +22,7 @@ jobs:
       matrix:
         recipe:
           - t2-atomic-kansei.yml
-          - fedora-kansei.yml
+          #- fedora-kansei.yml
 
     steps:
        # the build is fully handled by the reusable github action
