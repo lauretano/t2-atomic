@@ -44,10 +44,6 @@ modules:
       - libtirpc-devel
       - fedora-easy-karma
 
-      # cd burning for usb superdrive lol
-      - wodim
-      - sg3_utils
-
       #bits for hyprpm since it doesn't really work in distrobox
       - cmake
       - gcc-c++
@@ -103,6 +99,8 @@ modules:
         - it.mijorus.gearlever
         - io.missioncenter.MissionCenter
         - md.obsidian.Obsidian
+        - org.gnome.Fractal
+        - org.gnome.Snapshot
         - com.prusa3d.PrusaSlicer
         - im.riot.Riot
         - org.raspberrypi.rpi-imager
@@ -110,8 +108,10 @@ modules:
         - io.gitlab.librewolf-community
         - org.gnome.Snapshot
         - org.gnome.Weather
-        - com.github.rafostar.Clapper
         - org.gnome.font-viewer
+        - dev.zed.Zed
+        - dev.deedles.Trayscale
+        - com.visualstudio.code
 
   - type: rpm-ostree
     repos:
