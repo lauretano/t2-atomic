@@ -6,17 +6,7 @@ modules:
       - grim
       - slurp
       - wlogout
-      - hyprland
-      - hyprland-plugins
-      - aquamarine
-      - hypridle
-      - hyprlock
-      - hyprcursor
-      - hyprlang
-      - hyprutils
-      - hyprpaper
-      - hyprpicker
-      
+    
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%OS_VERSION%/erikreider-SwayNotificationCenter-fedora-%OS_VERSION%.repo
@@ -27,6 +17,15 @@ modules:
     repos:
       - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
     install:
+      - hyprland
+      - aquamarine
+      - hypridle
+      - hyprlock
+      - hyprcursor
+      - hyprlang
+      - hyprutils
+      - hyprpaper
+      - hyprpicker
       - hyprpolkitagent
       - hyprgraphics
       - hyprsysteminfo
