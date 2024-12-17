@@ -67,12 +67,14 @@ modules:
       - wayland-protocols-devel
       - uuid
       - libxkbcommon
+      - libxkbcommon-devel
       - cairo-devel
       - pango-devel
       - pixman-devel
       - libinput-devel
       - mesa-libgbm-devel
       - uuid-devel
+      - libuuid-devel
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
