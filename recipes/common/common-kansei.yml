@@ -60,6 +60,7 @@ modules:
       - aquamarine-devel
       - hyprlang-devel
       - hyprcursor-devel
+      - hyprwayland-scanner-devel
       - mesa-libgbm
       - libinput
       - pixman
