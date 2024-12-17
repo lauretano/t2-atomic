@@ -80,7 +80,6 @@ modules:
       - xcb-util-devel
       - xcb-util
       - xcb-util-errors
-      - xcb-
       - libxcb-devel
       - xcb-util-cursor
       - xcb-util-cursor-devel
