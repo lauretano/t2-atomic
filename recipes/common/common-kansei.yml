@@ -86,6 +86,8 @@ modules:
       - xcb-util-cursor-devel
       - xcb-util-wm
       - xcb-util-wm-devel
+      - tomlplusplus
+      - tomlplusplus-devel
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
