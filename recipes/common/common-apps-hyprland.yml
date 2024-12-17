@@ -19,7 +19,6 @@ modules:
     install:
       - hyprland
       - hyprland-plugins
-      - hyprland-protocols
       - hyprland-qtutils
       - aquamarine
       - hyprland-welcome
