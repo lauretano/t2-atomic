@@ -14,7 +14,7 @@ modules:
       - cosmic-notifications
       - cosmic-osd
       - cosmic-bg
-      - cosmic-applkets
+      - cosmic-applets
       - cosmic-randr
       - cosmic-wallpapers
       - cosmic-idle
