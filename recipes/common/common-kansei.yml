@@ -35,6 +35,7 @@ modules:
       - wayvnc
       - frog-protocols
       - yaru-theme
+      - cosmic-store
 
       # bits for fedora QA
       - gcc
