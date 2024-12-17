@@ -12,7 +12,7 @@ modules:
       - sysprof-cli
       # superdrive support via sg3_util and a cli tool to burn
       - wodim
-      - sg3_util
+      - sg3_utils
 
       # fonts on linux haven't always been good
       #   give people some great ones
