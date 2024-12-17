@@ -1,9 +1,6 @@
 # modules and things general to all cosmic recipes
 modules:
   - type: rpm-ostree
-  #  repos:
-  #    # TEMP: this is hardcoded as rawhide as of 20240531 as f40 repo isn't yet available (brand new copr)
-  #    - https://copr.fedorainfracloud.org/coprs/ryanabx/cosmic-epoch/repo/fedora-40/ryanabx-cosmic-epoch-fedora-%OS_VERSION%.repo
     install:
       - cosmic-session
       - cosmic-app-library
@@ -14,3 +11,11 @@ modules:
       - cosmic-settings
       - cosmic-store
       - cosmic-term
+      - cosmic-notifications
+      - cosmic-osd
+      - cosmic-bg
+      - cosmic-applkets
+      - cosmic-randr
+      - cosmic-wallpapers
+      - cosmic-idle
+      - xdg-desktop-portal-cosmic
