@@ -57,6 +57,22 @@ modules:
       - hyprutils-devel
       - aquamarine
       - aquamarine-devel
+      - hyprlang-devel
+      - hyprcursor-devel
+      - mesa-libgbm
+      - libinput
+      - pixman
+      - pango
+      - cairo
+      - wayland-protocols-devel
+      - uuid
+      - libxkbcommon
+      - cairo-devel
+      - pango-devel
+      - pixman-devel
+      - libinput-devel
+      - mesa-libgbm-devel
+      - uuid-devel
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
