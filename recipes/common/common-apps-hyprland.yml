@@ -6,6 +6,15 @@ modules:
       - grim
       - slurp
       - wlogout
+      - hyprland
+      - aquamarine
+      - hyprcursor
+      - hyprutils
+      - hyprpicker
+      - hyprpaper
+      - hypridle
+      - hyprlock
+      - hyprlang
     
   - type: rpm-ostree
     repos:
@@ -17,15 +26,6 @@ modules:
     repos:
       - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
     install:
-      - hyprland
-      - aquamarine
-      - hypridle
-      - hyprlock
-      - hyprcursor
-      - hyprlang
-      - hyprutils
-      - hyprpaper
-      - hyprpicker
       - hyprpolkitagent
       - hyprgraphics
       - hyprsysteminfo
