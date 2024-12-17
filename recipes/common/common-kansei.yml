@@ -77,12 +77,15 @@ modules:
       - mesa-libgbm-devel
       - uuid-devel
       - libuuid-devel
-      - xcb-util-devel
       - xcb-util
       - xcb-util-errors
+      - xcb-util-errors-devel
       - libxcb-devel
+      - xcb-util-devel
       - xcb-util-cursor
       - xcb-util-cursor-devel
+      - xcb-util-wm
+      - xcb-util-wm-devel
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
