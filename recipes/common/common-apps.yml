@@ -10,6 +10,9 @@ modules:
       - cockpit-ostree
       - sysprof
       - sysprof-cli
+      # superdrive support via sg3_util and a cli tool to burn
+      - wodim
+      - sg3_util
 
       # fonts on linux haven't always been good
       #   give people some great ones
@@ -17,6 +20,7 @@ modules:
       - mozilla-fira-sans-fonts
       - mozilla-fira-mono-fonts
       - jetbrains-mono-fonts-all
+      - ibm-plex-fonts-all
 
     remove:
       - firefox
@@ -31,3 +35,4 @@ modules:
       repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
         - org.mozilla.firefox
+        - org.gnome.Brasero
