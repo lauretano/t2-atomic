@@ -30,7 +30,6 @@ modules:
       - hyprpaper
       - hyprpicker
       - hyprutils
-      - hyprland-contrib
       - hyprsunset
       - hyprpolkitagent
       - hyprsysteminfo
