@@ -10,8 +10,6 @@ modules:
       - qalculate
       - qalculate-gtk
       - inxi
-      - jetbrains-mono-fonts-all
-      - ibm-plex-fonts-all
       - obs-studio-devel
       - obs-studio-libs 
       - obs-studio-plugin-vaapi
@@ -27,15 +25,16 @@ modules:
       - waycheck
       - wayland-devel
       - wf-recorder
-      #
       - zathura
       - zathura-fish-completion
       - zathura-pdf-mupdf
-      - tmux
       - wayvnc
       - frog-protocols
       - yaru-theme
       - cosmic-store
+      - cosmic-files
+      - cosmic-settings
+      - cosmic-settings-daemon
 
       # bits for fedora QA
       - gcc
