@@ -35,6 +35,7 @@ modules:
       - cosmic-files
       - cosmic-settings
       - cosmic-settings-daemon
+      - waydroid
 
       # bits for fedora QA
       - gcc
