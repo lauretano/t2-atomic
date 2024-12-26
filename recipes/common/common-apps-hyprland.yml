@@ -27,8 +27,4 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
     install:
       - hyprpolkitagent
-      - hyprgraphics
-      - hyprsysteminfo
-      - hyprsunset
       - hyprshot
-      - mpvpaper
