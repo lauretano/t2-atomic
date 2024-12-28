@@ -21,6 +21,7 @@ modules:
   - from-file: common/common-apps-wayland.yml
   - from-file: common/common-apps-river.yml
   - from-file: common/common-apps-cosmic.yml
+  - from-file: common/common-apps-dockerce.yml
   - from-file: common/common-kansei.yml
 
 
