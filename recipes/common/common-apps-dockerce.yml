@@ -5,5 +5,4 @@ modules:
     install:
       - docker-ce
       - docker-ce-cli
-      - docker-compose
       - containerd.io
