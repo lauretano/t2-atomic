@@ -37,6 +37,7 @@ modules:
       - cosmic-settings-daemon
       - boinc-client
       - boinc-tui
+      - boinc-manager
 
       # bits for fedora QA
       - gcc
