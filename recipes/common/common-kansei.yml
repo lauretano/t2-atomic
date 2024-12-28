@@ -35,7 +35,8 @@ modules:
       - cosmic-files
       - cosmic-settings
       - cosmic-settings-daemon
-      - waydroid
+      - boinc-clien
+      - boinc-tui
 
       # bits for fedora QA
       - gcc
@@ -84,6 +85,7 @@ modules:
       - xcb-util-wm-devel
       - tomlplusplus
       - tomlplusplus-devel
+
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
