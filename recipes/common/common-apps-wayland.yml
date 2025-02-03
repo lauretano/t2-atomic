@@ -101,7 +101,7 @@ modules:
       - dunst
 
     # theme and GUI
-      - adwaita-qt5
+      #- adwaita-qt5
       - fontawesome-fonts-all
       - gnome-themes-extra
       - gnome-icon-theme
