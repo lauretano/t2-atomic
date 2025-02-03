@@ -10,14 +10,15 @@ modules:
       - qalculate
       - qalculate-gtk
       - inxi
-      - obs-studio-devel
-      - obs-studio-libs 
-      - obs-studio-plugin-vaapi
-      - obs-studio-plugin-vkcapture
-      - obs-studio-plugin-vlc-video
-      - obs-studio-plugin-webkitgtk
+      #- obs-studio-devel
+      #- obs-studio-libs 
+      #- obs-studio-plugin-vaapi
+      #- obs-studio-plugin-vkcapture
+      #- obs-studio-plugin-vlc-video
+      #- obs-studio-plugin-webkitgtk
       - pipewire-v4l2 
       - powertop
+      - btop
       - tmux
       - tuigreet 
       - vim 
@@ -29,15 +30,12 @@ modules:
       - zathura-fish-completion
       - zathura-pdf-mupdf
       - wayvnc
-      - frog-protocols
       - yaru-theme
       - cosmic-store
       - cosmic-files
       - cosmic-settings
       - cosmic-settings-daemon
-      - boinc-client
-      - boinc-tui
-      - boinc-manager
+      #- boinctui
 
       # bits for fedora QA
       - gcc
@@ -45,48 +43,6 @@ modules:
       - make
       - libtirpc-devel
       - fedora-easy-karma
-
-      #bits for hyprpm since it doesn't really work in distrobox
-      - cmake
-      - gcc-c++
-      - meson
-      - cpio
-      - glfw
-      - glfw-devel
-      - hyprutils-devel
-      - aquamarine
-      - aquamarine-devel
-      - hyprlang-devel
-      - hyprcursor-devel
-      - hyprwayland-scanner-devel
-      - mesa-libgbm
-      - libinput
-      - pixman
-      - pango
-      - cairo
-      - wayland-protocols-devel
-      - uuid
-      - libxkbcommon
-      - libxkbcommon-devel
-      - cairo-devel
-      - pango-devel
-      - pixman-devel
-      - libinput-devel
-      - mesa-libgbm-devel
-      - uuid-devel
-      - libuuid-devel
-      - xcb-util
-      - xcb-util-errors
-      - xcb-util-errors-devel
-      - libxcb-devel
-      - xcb-util-devel
-      - xcb-util-cursor
-      - xcb-util-cursor-devel
-      - xcb-util-wm
-      - xcb-util-wm-devel
-      - tomlplusplus
-      - tomlplusplus-devel
-
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
@@ -108,12 +64,10 @@ modules:
         - im.riot.Riot
         - org.raspberrypi.rpi-imager
         - re.sonny.Junction
-        - io.gitlab.librewolf-community
         - org.gnome.Snapshot
         - org.gnome.Weather
         - org.gnome.font-viewer
         - dev.zed.Zed
-        - dev.deedles.Trayscale
         - com.visualstudio.code
 
   - type: rpm-ostree
