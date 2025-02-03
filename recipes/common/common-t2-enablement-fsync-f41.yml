@@ -3,7 +3,6 @@
 modules:
   - type: containerfile
     snippets:
-      - COPY --from=ghcr.io/ublue-os/akmods:fsync-41  /rpms /tmp/akmods-rpms
       - COPY --from=ghcr.io/ublue-os/fsync-kernel:41 /tmp/rpms/ /tmp/kernel-rpms
 
 # install the kernel rpms from that container
