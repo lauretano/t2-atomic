@@ -27,4 +27,4 @@ modules:
       # pull Wifi/BT firmware sources from arch-t2 mirror
       # using asahi-installer fork to package for use in fedora
       # it's hacky <3
-      - apple-bcm-firmware.sh
+      #- apple-bcm-firmware.sh
