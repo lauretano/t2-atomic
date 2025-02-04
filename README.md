@@ -10,12 +10,13 @@ Gnome - Plasma - Sway - Cosmic - River
 
 - [Installation Instructions](#installation)
 - [Advanced Settings](#advanced-settings)
+- [Troubleshooting](#troubleshooting)
 
 ### Who is this for?
 Please don't buy a MacBook to use Linux on it. Buy a [Framework](https://frame.work), something from [System76](https://system76.com/), or for the love of compute at least a used ThinkPad.
 
-T2 Atomic, in current state, isn't for beginner Linux users, due to the complexity of the T2 Macs (one of the most proprietary x86 laptops).
-[T2Linux](https://wiki.t2linux.org/) has built a lot of documentation,tooling, and specialty repositories to support installing distros on T2 Macs, including Fedora Workstation. To allow installation of the modern Fedora Atomic Desktops, T2-Atomic was born based on these efforts.
+T2 Atomic is not for beginners, due to the complexity of the T2 Macs (one of the most proprietary x86 laptops) multiplied by Fedora's old Anaconda installer multiplied by Atomic/Immutable distro complexity. [T2Linux](https://wiki.t2linux.org/) has built a lot of documentation,tooling, and specialty repositories to support installing various distros on T2 Macs, including Fedora Workstation. To allow installation of the modern Fedora Atomic Desktops, T2-Atomic was born based on these efforts.
+
 
 ### Why Atomic/Immutable?
 Your T2 Mac has specialized needs, requiring patched kernels, kernel arguments, assistance packages, daemons, etc --and that's just to use the keyboard and trackpad. Instead of worrying if the latest version of some small but critical utility will break your Mac on reboot, let our modern build and test pipeline find incompatibilities before those ever get to your device. Relax and let the daily updates stage in the background. When you reboot, you'll get new base OS software. 
@@ -144,6 +145,9 @@ Something go wrong with a new build? Follow these steps.
 - Reboot, and from the boot menu select the previous deployment (you may need to press space or some other keyboard key to present the menu)
 - When the previous deployment boots, run ```rpm-ostree rollback```, which will make the older deployment the active one.
 - If you think this failure was caused by our image please open an issue here on github, we'll be happy to investigate.
+
+### Join our Matrix channel!
+We have a channel, [#t2-atomic](https://matrix.to/#/%23t2-atomic:matrix.org), where you are welcome to join, and if available, a volunteer may be able to assist you with any trouble you encounter.
 
 ## Major Updates
 - 3 February 2025 New Installation steps around generating an RPM of your WiFi firmware from Mac OS before install.
