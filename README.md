@@ -12,7 +12,10 @@ Gnome - Plasma - Sway - Cosmic - River
 - [Advanced Settings](#advanced-settings)
 
 ### Who is this for?
-Please don't buy a MacBook to use Linux on it, this project is for those of us tired of macOS, with hand-me-downs, etc. Buy a [Framework](https://frame.work), something from [System76](https://system76.com/), or for the love of compute at least a used ThinkPad. But, if you must... [T2Linux](https://wiki.t2linux.org/) has built a lot of documentation,tooling, and specialty repositories to support installing distros on T2 Macs, including Fedora Workstation. T2-Atomic is built off these efforts, brought into the atomic/immutable world.
+Please don't buy a MacBook to use Linux on it. Buy a [Framework](https://frame.work), something from [System76](https://system76.com/), or for the love of compute at least a used ThinkPad.
+
+T2 Atomic, in current state, isn't for beginner Linux users, due to the complexity of the T2 Macs (one of the most proprietary x86 laptops).
+[T2Linux](https://wiki.t2linux.org/) has built a lot of documentation,tooling, and specialty repositories to support installing distros on T2 Macs, including Fedora Workstation. To allow installation of the modern Fedora Atomic Desktops, T2-Atomic was born based on these efforts.
 
 ### Why Atomic/Immutable?
 Your T2 Mac has specialized needs, requiring patched kernels, kernel arguments, assistance packages, daemons, etc --and that's just to use the keyboard and trackpad. Instead of worrying if the latest version of some small but critical utility will break your Mac on reboot, let our modern build and test pipeline find incompatibilities before those ever get to your device. Relax and let the daily updates stage in the background. When you reboot, you'll get new base OS software. 
@@ -26,11 +29,9 @@ Fedora Atomic brings the distro into the modern age, where the base OS and packa
     - Gnome (Silverblue)
     - Plasma (Kinoite)
     - Sway (Sericea)
-    - Cosmic Alpha** - based on Silverblue, includes Gnome and Gnome apps
-    - Bluefin and Aurora - Universal Blue's Bluefin and Aurora images, for T2
-    - Bluefin-DX and Aurora-DX - Univeral Blue's Bluefin Developer Experience, for T2
-    - River** - Isaac Freund's [River](https://isaacfreund.com/software/river/) dynamic tiling Wayland compositor with flexible runtime configuration, on Universal Blue "base" image
-    - Swayfx** - effectively Sericea modified to use Swayfx instead of Sway.
+    - Advanced: Cosmic Beta - based on Silverblue base image, includes Gnome and Gnome apps
+
+    - Advanced: River** - Isaac Freund's [River](https://isaacfreund.com/software/river/) dynamic tiling Wayland compositor with flexible runtime configuration, on Universal Blue "base" image
     - Tags: latest (we may add a "stable" with fsync-ba kernel like Bluefin has available)
 
 - **Note**: External/USB input devices are **required** for installation. The internal keyboard and trackpad will not work during installation, or during encryption password prompt on boot (the latter fixed with a simple command later). If a build ever breaks the keyboard/trackpad, the immutability of Atomic Desktops helps, just boot to an earlier image and rpm-ostree rollback.
