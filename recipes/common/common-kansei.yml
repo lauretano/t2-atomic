@@ -35,7 +35,8 @@ modules:
       - cosmic-files
       - cosmic-settings
       - cosmic-settings-daemon
-      #- boinctui
+      - boinc-tui
+      - dmg2img
 
       # bits for fedora QA
       - gcc
