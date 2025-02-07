@@ -3,7 +3,7 @@ on:
   schedule:
     - cron: "30 10 * * *" # builds to finish around 18:00 US/Eastern every day
                           # (ublue main images build a bit after 03:00 UTC)
-  # push:
+  push:
   #   paths-ignore: # don't rebuild if only documentation has changed
   #     - "**.md"
       

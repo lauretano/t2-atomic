@@ -10,6 +10,7 @@ modules:
       - cockpit-ostree
       - sysprof
       - sysprof-cli
+      - radeon-profile
       # superdrive support via sg3_util and a cli tool to burn
       - wodim
       - sg3_utils
