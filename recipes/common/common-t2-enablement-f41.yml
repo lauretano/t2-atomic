@@ -21,14 +21,3 @@ modules:
       # the following are being used by asahi-audio and we'd like to implement them for T2
       - bankstown-lv2
       - speakersafetyd
-      
-  - type: script
-    scripts:
-      # pull Wifi/BT firmware sources from arch-t2 mirror
-      # using asahi-installer fork to package for use in fedora
-      # it's hacky <3
-      #- apple-bcm-firmware.sh
-
-  - type: script
-    snippets: 
-      #- "set -x; kver=$(cd /usr/lib/modules && echo *); dracut -vf /usr/lib/modules/$kver/initramfs.img $kver"
