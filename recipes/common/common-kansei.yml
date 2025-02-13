@@ -2,7 +2,6 @@
 modules:
   - type: rpm-ostree
     install:
-      - fish
       - tailscale
       - gnome-pomodoro
       - python3-pydbus
@@ -10,12 +9,6 @@ modules:
       - qalculate
       - qalculate-gtk
       - inxi
-      #- obs-studio-devel
-      #- obs-studio-libs 
-      #- obs-studio-plugin-vaapi
-      #- obs-studio-plugin-vkcapture
-      #- obs-studio-plugin-vlc-video
-      #- obs-studio-plugin-webkitgtk
       - pipewire-v4l2 
       - powertop
       - btop
@@ -27,16 +20,9 @@ modules:
       - wayland-devel
       - wf-recorder
       - zathura
-      - zathura-fish-completion
       - zathura-pdf-mupdf
       - wayvnc
       - yaru-theme
-      - cosmic-store
-      - cosmic-files
-      - cosmic-settings
-      - cosmic-settings-daemon
-      - boinc-tui
-      - dmg2img
 
       # bits for fedora QA
       - gcc
@@ -44,6 +30,30 @@ modules:
       - make
       - libtirpc-devel
       - fedora-easy-karma
+
+      # the cosmic DE apps pair well with river so include some
+      - cosmic-store
+      - cosmic-files
+      - cosmic-edit
+      - cosmic-settings
+      - cosmic-settings-daemon
+
+      - boinc-tui
+      - dmg2img
+
+
+      #- obs-studio-devel
+      #- obs-studio-libs 
+      #- obs-studio-plugin-vaapi
+      #- obs-studio-plugin-vkcapture
+      #- obs-studio-plugin-vlc-video
+      #- obs-studio-plugin-webkitgtk
+
+  - type: rpm-ostree
+    repos:
+      https://copr.fedorainfracloud.org/coprs/germano/boinc8/repo/fedora-%OS_VERSION%/germano-boinc8-fedora-%OS_VERSION%.repo
+    install:
+      - boinc-client
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
