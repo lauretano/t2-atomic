@@ -51,12 +51,6 @@ modules:
       #- obs-studio-plugin-vlc-video
       #- obs-studio-plugin-webkitgtk
 
-  - type: rpm-ostree
-    repos:
-      - https://copr.fedorainfracloud.org/coprs/germano/boinc8/repo/fedora-%OS_VERSION%/germano-boinc8-fedora-%OS_VERSION%.repo
-    install:
-      - boinc-client
-
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
     system:
