@@ -5,15 +5,10 @@ modules:
       - waybar
       - xdg-desktop-portal-wlr
       - xdg-desktop-portal-gtk
-
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/alebastr/sway-extras/repo/fedora-%OS_VERSION%/alebastr-sway-extras-fedora-%OS_VERSION%.repo
     install:
       - swayimg
       - poweralertd
-      - pinentry-rofi
-      
-  - type: script
-    snippets: 
-      #- "sed -i '/^UseIn/ s/$/,sway/' /usr/share/xdg-desktop-portal/portals/gnome-keyring.portal"
+    
