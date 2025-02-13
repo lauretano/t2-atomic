@@ -1,3 +1,5 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
 # this applies the kansei edition apps and modifications
 modules:
   - type: rpm-ostree
@@ -51,7 +53,7 @@ modules:
 
   - type: rpm-ostree
     repos:
-      https://copr.fedorainfracloud.org/coprs/germano/boinc8/repo/fedora-%OS_VERSION%/germano-boinc8-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/germano/boinc8/repo/fedora-%OS_VERSION%/germano-boinc8-fedora-%OS_VERSION%.repo
     install:
       - boinc-client
 
@@ -79,7 +81,7 @@ modules:
         - org.gnome.Weather
         - org.gnome.font-viewer
         - dev.zed.Zed
-        - com.visualstudio.code
+        - com.vscodium.codium
 
   - type: rpm-ostree
     repos:
