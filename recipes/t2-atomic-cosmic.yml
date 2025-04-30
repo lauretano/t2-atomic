@@ -7,8 +7,8 @@ name: t2-atomic-cosmic
 # description will be included in the image's metadata
 description: Fedora Atomic Cosmic base spin for Apple T2 Hardware
 
-base-image: quay.io/fedora-ostree-desktops/cosmic-atomic
-image-version: 41
+base-image: quay.io/fedora-ostree-desktops/cosmic-atomic-main
+image-version: 42
 
 modules:
   - from-file: common/common-files.yml
@@ -17,8 +17,7 @@ modules:
   - from-file: common/common-apps.yml
 
   - type: script
-    snippets: 
+    snippets:
       - "ln -sfn /usr/lib/systemd/system/cosmic-greeter.service /etc/systemd/system/display-manager.service"
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
-  

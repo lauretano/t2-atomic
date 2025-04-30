@@ -7,10 +7,10 @@ name: t2-atomic-sway
 # description will be included in the image's metadata
 description: Fedora Atomic Sway (sericea) spin for Apple T2 Hardware
 
-base-image: ghcr.io/ublue-os/sericea-main
-image-version: 41
+base-image: ghcr.io/ublue-os/sway-atomic-main
+image-version: 42
 
-modules:  
+modules:
   - from-file: common/common-files.yml
   - from-file: common/common-files-sway.yml
   - from-file: common/common-t2-enablement-f41.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
@@ -20,7 +20,7 @@ modules:
   - from-file: common/common-apps.yml
 
   - type: script
-    snippets: 
+    snippets:
       - "ln -sfn /usr/lib/systemd/system/greetd.service /etc/systemd/system/display-manager.service"
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

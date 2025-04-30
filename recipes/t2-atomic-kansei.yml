@@ -6,7 +6,7 @@
 name: t2-atomic-kansei
 # description will be included in the image's metadata
 description: Fedora Atomic Personal Spin
-base-image: ghcr.io/ublue-os/sericea-main
+base-image: ghcr.io/ublue-os/sway-atomic-main
 image-version: 42
 
 modules:
