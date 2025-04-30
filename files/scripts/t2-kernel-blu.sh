@@ -6,7 +6,7 @@
 set -oue pipefail
 
 echo 'T2-Atomic: Kernel Pre-Install: Installing Kernel...'
-wget https://copr.fedorainfracloud.org/coprs/sentry/kernel-blu/repo/fedora-%OS_VERSION%/sentry-kernel-blu-fedora-%OS_VERSION%.repo -O /etc/yum.repos.d/kernel-blu.repo
+# wget https://copr.fedorainfracloud.org/coprs/sentry/kernel-blu/repo/fedora-%OS_VERSION%/sentry-kernel-blu-fedora-%OS_VERSION%.repo -O /etc/yum.repos.d/kernel-blu.repo
 
 rpm-ostree cliwrap install-to-root / && \
     rpm-ostree override replace --experimental --freeze \
