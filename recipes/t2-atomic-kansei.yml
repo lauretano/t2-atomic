@@ -6,7 +6,7 @@
 name: t2-atomic-kansei
 # description will be included in the image's metadata
 description: Fedora Atomic Personal Spin
-base-image: ghcr.io/ublue-os/sway-atomic-main
+base-image: quay.io/fedora-ostree-desktops/sway-atomic
 image-version: 42
 
 modules:
@@ -15,13 +15,13 @@ modules:
   - from-file: common/common-files-river.yml
   #- from-file: common/common-files-cosmic.yml
   - from-file: common/common-t2-enablement-f41.yml #installs t2 kernel, t2 grub arguments, and packages for enabling t2 hardware
-  - from-file: common/common-t2-kernel.yml #pulls fsync containerfile and overrides base image kernel
+  - from-file: common/common-t2-kernel-blu.yml #pulls fsync containerfile and overrides base image kernel
   #- from-file: common/common-apps-hyprland.yml
   - from-file: common/common-apps.yml #installs apps common across all the t2 editions
   - from-file: common/common-apps-wayland.yml
   - from-file: common/common-apps-river.yml
   #- from-file: common/common-apps-cosmic.yml
-  - from-file: common/common-apps-dockerce.yml
+  #- from-file: common/common-apps-dockerce.yml
   - from-file: common/common-kansei.yml
 
   - type: script
