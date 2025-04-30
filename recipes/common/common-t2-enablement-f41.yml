@@ -3,15 +3,15 @@ modules:
     repos:
       # thanks @SharpenedBlade for having these builds set up
       - https://copr.fedorainfracloud.org/coprs/sharpenedblade/t2linux/repo/fedora-%OS_VERSION%/sharpenedblade-t2linux-fedora-%OS_VERSION%.repo
- 
+
     install:
       # fan control, touchbar support, basic audio support
       - t2fanrd
-      - tiny-dfr
+      #- tiny-dfr
       - t2linux-audio
 
-      # install dependencies for software audio tuning needed for 
-      #  MacBookPro 16,1-2 and others 
+      # install dependencies for software audio tuning needed for
+      #  MacBookPro 16,1-2 and others
       - calf
       - libspatialaudio
       - lsp-plugins-lv2
