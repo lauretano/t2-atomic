@@ -7,7 +7,7 @@ name: t2-atomic-cosmic
 # description will be included in the image's metadata
 description: Fedora Atomic Cosmic base spin for Apple T2 Hardware
 
-base-image: quay.io/fedora-ostree-desktops/cosmic-atomic-main
+base-image: quay.io/fedora-ostree-desktops/cosmic-atomic
 image-version: 42
 
 modules:
