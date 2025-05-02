@@ -42,6 +42,7 @@ modules:
 
       - boinc-tui
       - dmg2img
+      - stow
 
 
       #- obs-studio-devel
@@ -76,6 +77,7 @@ modules:
         - org.gnome.font-viewer
         - dev.zed.Zed
         - com.vscodium.codium
+        - dev.deedles.Trayscale
 
   - type: rpm-ostree
     repos:
