@@ -45,6 +45,7 @@ modules:
       - waycheck
       - adw-gtk3-theme
       - wlogout
+      - swww
 
       # sound
       - wireplumber
