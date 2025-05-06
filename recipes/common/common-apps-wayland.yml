@@ -45,7 +45,6 @@ modules:
       - waycheck
       - adw-gtk3-theme
       - wlogout
-      - swww
 
       # sound
       - wireplumber
@@ -119,3 +118,8 @@ modules:
     install:
       - SwayNotificationCenter
       - SwayNotificationCenter-fish-completion
+  - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/alebastr/sway-extras/repo/fedora-42/alebastr-sway-extras-fedora-42.repo
+    install:
+      - swww
