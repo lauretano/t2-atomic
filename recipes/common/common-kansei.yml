@@ -78,6 +78,7 @@ modules:
         - dev.zed.Zed
         - com.vscodium.codium
         - dev.deedles.Trayscale
+        - org.qgis.qgis
 
   - type: rpm-ostree
     repos:
