@@ -97,7 +97,6 @@ modules:
     # terminal
       - alacritty
       - foot
-      - kitty
 
     # notifications
       - dunst
@@ -117,9 +116,8 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%OS_VERSION%/erikreider-SwayNotificationCenter-fedora-%OS_VERSION%.repo
     install:
       - SwayNotificationCenter
-      - SwayNotificationCenter-fish-completion
   - type: rpm-ostree
     repos:
-      - https://copr.fedorainfracloud.org/coprs/alebastr/sway-extras/repo/fedora-42/alebastr-sway-extras-fedora-42.repo
+      - https://copr.fedorainfracloud.org/coprs/alebastr/sway-extras/repo/fedora-%OS_VERSION%/alebastr-sway-extras-fedora-%OS_VERSION%.repo
     install:
       - swww
