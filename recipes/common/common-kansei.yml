@@ -43,7 +43,6 @@ modules:
       - boinc-tui
       - dmg2img
       - stow
-      - niri
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -87,6 +86,12 @@ modules:
       - topgrade
       - chezmoi
       - starship
+      
+  - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/yalter/niri/repo/fedora-%OS_VERSION%/yalter-niri-fedora-%OS_VERSION%.repo
+    install:
+      - niri
 
   - type: bling
     install:
