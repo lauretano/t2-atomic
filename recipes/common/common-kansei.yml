@@ -53,7 +53,7 @@ modules:
       #- obs-studio-plugin-webkitgtk
 
   - type: default-flatpaks
-    notify: false # Send notification after install/uninstall is finished (true/false)
+    notify: true # Send notification after install/uninstall is finished (true/false)
     system:
       # If no repo information is specified, Flathub will be used by default
       # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -69,10 +69,11 @@ modules:
         - org.gnome.Fractal
         - org.gnome.Snapshot
         - com.prusa3d.PrusaSlicer
+        - org.openscad.OpenSCAD
+        - org.freecad.FreeCAD
         - im.riot.Riot
         - org.raspberrypi.rpi-imager
         - re.sonny.Junction
-        - org.gnome.Snapshot
         - org.gnome.Weather
         - org.gnome.font-viewer
         - dev.zed.Zed
