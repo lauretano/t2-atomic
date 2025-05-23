@@ -23,6 +23,10 @@ modules:
       - jetbrains-mono-fonts-all
       - ibm-plex-fonts-all
 
+      #
+      #- cups-pk-helper (already included)
+      - cups-pdf
+
     remove:
       - firefox
       - firefox-langpacks
