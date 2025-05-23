@@ -43,14 +43,7 @@ modules:
       - boinc-tui
       - dmg2img
       - stow
-
-
-      #- obs-studio-devel
-      #- obs-studio-libs 
-      #- obs-studio-plugin-vaapi
-      #- obs-studio-plugin-vkcapture
-      #- obs-studio-plugin-vlc-video
-      #- obs-studio-plugin-webkitgtk
+      - niri
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
