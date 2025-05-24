@@ -1,7 +1,7 @@
 name: T2 Main Build
 on:
   schedule:
-    - cron: "45 21 * * *" # build at 03:30 UTC every day 
+    - cron: "30 7 * * *" # build at 03:30 UTC every day 
                           # (ublue main images build a bit after 03:00)
   # push:
   #   paths-ignore: # don't rebuild if only documentation has changed
