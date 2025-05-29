@@ -5,11 +5,7 @@ modules:
   - type: rpm-ostree
     install:
       - tailscale
-      - gnome-pomodoro
-      - python3-pydbus
       - lsd
-      - qalculate
-      - qalculate-gtk
       - inxi
       - pipewire-v4l2 
       - powertop
@@ -21,8 +17,6 @@ modules:
       - waycheck
       - wayland-devel
       - wf-recorder
-      - zathura
-      - zathura-pdf-mupdf
       - wayvnc
       - yaru-theme
 
@@ -39,8 +33,7 @@ modules:
       - cosmic-edit
       - cosmic-settings
       - cosmic-settings-daemon
-
-      - boinc-tui
+      
       - dmg2img
       - stow
       - rust
@@ -61,8 +54,8 @@ modules:
         - it.mijorus.gearlever
         - io.missioncenter.MissionCenter
         - md.obsidian.Obsidian
-        - org.gnome.Fractal
-        - org.gnome.Snapshot
+        - org.gnome.Fractal #matrix client
+        - org.gnome.Snapshot #webcam app
         - com.prusa3d.PrusaSlicer
         - org.openscad.OpenSCAD
         - org.freecad.FreeCAD
@@ -75,6 +68,7 @@ modules:
         - com.vscodium.codium
         - dev.deedles.Trayscale
         - org.qgis.qgis
+        - dev.edfloreshz.Calculator #(Cosmic Calculator)
 
   - type: rpm-ostree
     repos:
