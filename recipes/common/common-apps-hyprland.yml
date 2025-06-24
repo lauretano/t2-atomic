@@ -10,10 +10,6 @@ modules:
       - aquamarine
       - hyprcursor
       - hyprutils
-      - hyprpicker
-      - hyprpaper
-      - hypridle
-      - hyprlock
       - hyprlang
     
   - type: rpm-ostree
@@ -28,3 +24,7 @@ modules:
     install:
       - hyprpolkitagent
       - hyprshot
+      - hypridle
+      - hyprlock
+      - hyprpicker
+      - hyprpaper
