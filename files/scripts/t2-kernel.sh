@@ -7,7 +7,7 @@ set -oue pipefail
 
 echo 'T2-Atomic: Kernel Pre-Install: Installing Kernel...'
 
-rpm-ostree override replace --from repo=copr:copr.fedorainfracloud.org:sharpenedblade:t2linux \
+rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:sharpenedblade:t2linux \
     kernel kernel-core \
     kernel-modules kernel-modules-core
 
