@@ -1,10 +1,11 @@
 # T2 Atomic
-[![bluebuild](https://github.com/lauretano/t2-atomic/actions/workflows/build.yml/badge.svg)](https://github.com/lauretano/t2-atomic/actions/workflows/build.yml)
-
-[![bluebuild](https://github.com/lauretano/t2-atomic/actions/workflows/build-test.yml/badge.svg)](https://github.com/lauretano/t2-atomic/actions/workflows/build-test.yml)
 
 Fedora Atomic Desktops for Macs with T2 chips
 -------------------------------
+
+### Notice
+The images published here have been sunset but do not fear! The project has just moved into a github org, and can now be found at [github.com/kansei-os/t2-atomic](https://github.com/kansei-os/t2-atomic). Fedora 42 and onward can be found there. The project was rebuilt from the ground-up using bootc/containerfile tooling rather than the Bluebuild template used here, to modernize things for the future.
+
 
 Gnome - Plasma - Sway - Cosmic - River
 
